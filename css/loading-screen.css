@@ -1,0 +1,167 @@
+/* ============================================
+   AGMIEX Loading Screen Styles
+   Premium Stroke Reveal & Progress Animation
+   ============================================ */
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999; /* Higher than everything else */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--duration-slower) var(--ease-out),
+              visibility var(--duration-slower) var(--ease-out);
+  will-change: opacity;
+  clip-path: circle(150% at 50% 50%);
+}
+
+/* Premium slide and scale hide transition */
+.loading-screen--dismissed {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  clip-path: circle(0% at 50% 50%);
+  transition: opacity 1s cubic-bezier(0.85, 0, 0.15, 1),
+              clip-path 1.2s cubic-bezier(0.85, 0, 0.15, 1),
+              visibility 1.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.loading-screen__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  max-width: 340px;
+  width: 100%;
+  padding: 0 var(--space-6);
+}
+
+/* Logo Reveal Animations */
+.loading-screen__logo-container {
+  position: relative;
+  width: 240px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.loading-screen__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.85) translateY(10px);
+  animation: logoImgReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+  transition: filter var(--duration-base) var(--ease-out);
+}
+
+[data-theme="dark"] .loading-screen__logo-img {
+  filter: invert(1) brightness(1.2) contrast(1.1);
+}
+
+@keyframes logoImgReveal {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Shimmer/Glow surrounding logo container */
+.loading-screen__logo-glow {
+  position: absolute;
+  inset: -15px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+  filter: blur(12px);
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 1.2s forwards, pulseGlow 4s infinite ease-in-out 2s;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.25; }
+  50% { transform: scale(1.2); opacity: 0.45; }
+}
+
+/* Progress Section */
+.loading-screen__progress-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.8s forwards;
+}
+
+.loading-screen__progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--border-primary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-screen__progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.4s cubic-bezier(0.1, 0.8, 0.2, 1);
+  will-change: width;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.loading-screen__status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-family: var(--font-sans);
+}
+
+.loading-screen__percentage {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.loading-screen__status {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Smooth Page transition effect during loader fade out */
+body:not(.loaded) {
+  overflow: hidden;
+}
+
+/* Accessibility & Fallbacks */
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen {
+    transition: none !important;
+  }
+  .loading-screen--dismissed {
+    display: none !important;
+    clip-path: none !important;
+  }
+  .loading-screen__logo-img,
+  .loading-screen__logo-glow,
+  .loading-screen__progress-wrap {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,455 @@
+/* ============================================
+   AGMIEX Responsive Design System Overrides
+   Breakpoints: Mobile (≤480px), Tablet (481-768px),
+   Laptop (769-1440px), Large Desktop (1441-1920px),
+   and Ultra-Wide (≥1921px)
+   ============================================ */
+
+/* ── 1. GLOBAL CONTAINER & LAYOUT SCALE ── */
+@media (min-width: 1921px) {
+  :root {
+    /* Scale up base variables slightly for massive screens */
+    --container-xl: 1600px;
+    --container-2xl: 1800px;
+  }
+  
+  body {
+    font-size: 17px; /* Slightly larger base text */
+  }
+
+  section {
+    padding: var(--space-40) 0; /* More spacing above/below sections */
+  }
+
+  .hero__inner {
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: var(--space-20);
+  }
+
+  .hero__title {
+    font-size: 5rem;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-12);
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero__inner {
+    gap: var(--space-8);
+  }
+  
+  .hero__workspace-img {
+    height: 340px;
+  }
+  
+  .dashboard-mockup {
+    width: 300px;
+    bottom: -30px;
+    left: -40px;
+  }
+}
+
+/* ── 2. MEDIUM TABLETS & LARGE MOBILE (max-width: 1024px) ── */
+@media (max-width: 1024px) {
+  section {
+    padding: var(--space-24) 0;
+  }
+
+  /* Navigation burger system alignment */
+  .navbar__inner {
+    padding: 0 var(--space-6);
+  }
+
+  /* Services component configuration */
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Portfolio Grid */
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Tech grid */
+  .tech-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+  }
+
+  /* Industries */
+  .industries__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Case Studies */
+  .case-studies__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Team Grid */
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  /* Blog Grid */
+  .blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Booking scheduler layout */
+  .booking__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .booking__card {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Contact section layout */
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .contact__info {
+    order: -1; /* Display info cards above the form on tablet */
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .contact__info-item {
+    margin-bottom: 0;
+    padding: var(--space-4);
+  }
+}
+
+/* ── 3. TABLETS (max-width: 768px) ── */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  section {
+    padding: var(--space-20) 0;
+  }
+
+  /* Sticky nav responsive header container sizing */
+  .navbar__inner {
+    padding: 0 var(--space-4);
+  }
+
+  /* Hero visual element responsive stack */
+  .hero {
+    padding-top: calc(var(--nav-height) + var(--space-8));
+    padding-bottom: var(--space-16);
+    min-height: auto;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-10);
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__ctas {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero__stats {
+    width: 100%;
+    justify-content: center;
+    gap: var(--space-8);
+  }
+
+  .hero__visual {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .hero__workspace-img {
+    height: 280px;
+  }
+
+  /* Hide cursor glow trace effect and floating shapes on touch devices for performance */
+  .cursor-glow,
+  .floating-shape {
+    display: none !important;
+  }
+
+  /* Service Card styling updates */
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .service-card {
+    padding: var(--space-6);
+  }
+
+  .service-card__visual-container {
+    height: 180px;
+  }
+
+  /* Timeline */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 50px;
+    margin-bottom: var(--space-8);
+  }
+
+  .timeline-item__content {
+    width: 100%;
+  }
+
+  .timeline-item__badge {
+    left: 20px;
+    width: 38px;
+    height: 38px;
+    font-size: var(--text-sm);
+  }
+
+  /* Tech items columns stack */
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Case Studies Grid stack */
+  .case-studies__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Portfolio Grid */
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact layout info items */
+  .contact__info {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  /* Stat section stats counter grids */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-4) !important;
+  }
+
+  .stat-card {
+    padding: var(--space-6) !important;
+  }
+
+  /* Footer Layout stacking */
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+/* ── 4. SMALL MOBILE DEVICES (max-width: 480px) ── */
+@media (max-width: 480px) {
+  section {
+    padding: var(--space-16) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  /* Text Clamp/Scaling safety */
+  h1, .hero__title {
+    font-size: 2.1rem;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Hero Section stats */
+  .hero__stats {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: center;
+    border-top: 1px solid var(--border-primary);
+    padding-top: var(--space-4);
+  }
+
+  .hero__stat-item {
+    align-items: center;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+  }
+
+  /* Hide Three.js canvas mesh rotation points to prevent GPU battery drain on low-end screens */
+  .hero-three-canvas {
+    opacity: 0.4;
+  }
+
+  /* Image Aspect ratio adjustments to preserve scaling */
+  .hero__workspace-img {
+    height: 200px;
+  }
+
+  .service-card__visual-container {
+    height: 140px;
+  }
+
+  /* Stagger tech-grid items cleanly */
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .tech-item {
+    padding: var(--space-3) var(--space-4) !important;
+  }
+
+  .tech-item__name {
+    font-size: var(--text-xs) !important;
+  }
+
+  /* Industries */
+  .industries__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Booking calendar size reduction */
+  .booking__card {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .scheduler {
+    gap: var(--space-4);
+  }
+
+  .scheduler__day {
+    height: 34px;
+    font-size: 12px;
+    border-radius: var(--radius-sm);
+  }
+
+  .scheduler__slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+
+  .scheduler__slot {
+    height: 34px;
+    font-size: 11px;
+  }
+
+  /* WhatsApp Floater adjustment */
+  .whatsapp-float {
+    bottom: var(--space-4) !important;
+    right: var(--space-4) !important;
+    padding: var(--space-2) var(--space-3) !important;
+    border-radius: var(--radius-full) !important;
+  }
+  
+  .whatsapp-float span {
+    display: none !important; /* Hide text, show only icon on small mobile screens */
+  }
+
+  .whatsapp-float svg {
+    margin-right: 0 !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Accordion styling tags */
+  .faq-item__trigger {
+    padding: var(--space-4) !important;
+  }
+
+  .faq-item__trigger h4 {
+    font-size: var(--text-sm) !important;
+  }
+
+  /* Blog Cards */
+  .blog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Team Section */
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Client success logos grid spacing */
+  .marquee-item {
+    margin-right: var(--space-6) !important;
+  }
+
+  .marquee-item span {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ── 5. ACCESS-REDUCED MOTION SCALES ── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-three-canvas,
+  .aurora-container,
+  .morphing-shapes {
+    display: none !important;
+  }
+  
+  .reveal,
+  .reveal--blur {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
