@@ -107,22 +107,65 @@
          1. HERO SECTION
     ═══════════════════════════════════════════ -->
     <section class="hero" id="hero">
+      <!-- Animated background orbs -->
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
       <div class="container">
-        <div class="hero__content reveal">
-          <div class="hero__visual">
-            <img src="assets/logo/agamsingh.png" alt="Agam Singh" class="hero__img">
+        <div class="hero__content">
+
+          <!-- Profile image with floating gradient glow -->
+          <div class="hero__visual hero-anim hero-anim--1">
+            <div class="hero__glow" aria-hidden="true"></div>
+            <img src="assets/logo/agamsingh.png" alt="Agam Singh — Founder of AGMIEX" class="hero__img">
           </div>
 
-          <h1 class="hero__main-title">
-            Build your Startup<br>with AGMIEX
+          <!-- Value proposition heading -->
+          <h1 class="hero__main-title hero-anim hero-anim--2">
+            We Build Software<br>That <span class="hero__gradient-text">Grows Your Revenue</span>
           </h1>
 
-          <div class="hero__ctas">
-            <a href="#customized" class="btn btn--primary">Let's Explore</a>
-            <a href="#contact" class="btn btn--secondary">Contact Us</a>
+          <!-- Compelling subheading -->
+          <p class="hero__subtitle hero-anim hero-anim--3">
+            AGMIEX is a premium software studio that designs, develops &amp; ships
+            full-stack web apps, mobile apps, AI dashboards &amp; custom software — on time, with source code you own.
+          </p>
+
+          <!-- Premium CTA buttons -->
+          <div class="hero__ctas hero-anim hero-anim--4">
+            <a href="#contact" class="btn btn--primary btn--hero-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Book Free Consultation
+            </a>
+            <a href="#prebuilt" class="btn btn--secondary btn--hero-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              View Portfolio
+            </a>
           </div>
 
-          <div class="hero__trusted">
+          <!-- Trust badges -->
+          <div class="hero__trust-badges hero-anim hero-anim--5">
+            <div class="hero__trust-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Source Code Included</span>
+            </div>
+            <div class="hero__trust-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Free Consultation</span>
+            </div>
+            <div class="hero__trust-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Fast Delivery</span>
+            </div>
+            <div class="hero__trust-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Secure Payments</span>
+            </div>
+          </div>
+
+          <!-- Trusted by -->
+          <div class="hero__trusted hero-anim hero-anim--6">
             <div class="hero__trusted-avatars">
               <span class="avatar-dot"></span>
               <span class="avatar-dot"></span>
@@ -131,7 +174,8 @@
             <p>Trusted by <span>1.3L+</span> Audience</p>
           </div>
 
-          <div class="hero__partners">
+          <!-- Partner logos -->
+          <div class="hero__partners hero-anim hero-anim--7">
             <span class="partner-logo">Daily Objects</span>
             <span class="partner-logo">MURZBAN</span>
             <span class="partner-logo">ceya</span>
@@ -171,6 +215,100 @@
         <span class="marquee-band__item">Power BI & Operations Analytics</span>
       </div>
     </div>
+
+
+    <!-- ═══════════════════════════════════════════
+         2.5. DEMO OFFER SECTION (₹99 TRIAL)
+    ═══════════════════════════════════════════ -->
+    <section class="demo-banner-section" id="book-demo-offer">
+      <div class="demo-banner-container">
+        <div class="demo-banner-card reveal">
+          <!-- Background Aura -->
+          <div class="demo-banner-glow"></div>
+
+          <!-- Badge & Headings -->
+          <div class="demo-banner-header">
+            <span class="demo-banner-badge">
+              <span class="demo-banner-badge-dot"></span>
+              Special Trial Sprint — Try Before You Build
+            </span>
+            <h2 class="demo-banner-heading">
+              Book Your Personalized Website Demo for Just <span>₹99</span>
+            </h2>
+            <p class="demo-banner-subheading">
+              See a custom homepage design for your business before investing in a full project. The ₹99 will be adjusted if you proceed.
+            </p>
+
+            <!-- URGENCY & SCARCITY BAR (ONLY 1 LEFT, ₹10,000 CUT PRICE, 30S TIMER) -->
+            <div class="demo-urgency-wrapper">
+              <div class="scarcity-badge-pulse">
+                <span class="scarcity-dot"></span>
+                🔥 Only 1 Slot Left Today!
+              </div>
+
+              <div class="price-strikethrough-box">
+                <span class="price-old">₹10,000</span>
+                <span class="price-new-heavy">₹99</span>
+                <span class="discount-pill-tag">Heavy 99% Discount</span>
+              </div>
+
+              <div class="timer-box-30s">
+                <span>⏱️ Offer Expires In:</span>
+                <span class="timer-digits-30s demo-30s-timer">00:30</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Feature Cards -->
+          <div class="demo-feature-grid">
+            <div class="demo-feature-card">
+              <div class="demo-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <h3 class="demo-feature-title">Personalized Design</h3>
+              <p class="demo-feature-desc">Custom homepage concept crafted specifically for your brand & industry.</p>
+            </div>
+
+            <div class="demo-feature-card">
+              <div class="demo-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3 class="demo-feature-title">24–48 Hour Delivery</h3>
+              <p class="demo-feature-desc">Receive your interactive design mockup within 2 business days.</p>
+            </div>
+
+            <div class="demo-feature-card">
+              <div class="demo-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h3 class="demo-feature-title">Mobile Responsive</h3>
+              <p class="demo-feature-desc">Flawless layout optimization across smartphones, tablets, and desktops.</p>
+            </div>
+
+            <div class="demo-feature-card">
+              <div class="demo-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h3 class="demo-feature-title">₹99 Adjustable</h3>
+              <p class="demo-feature-desc">100% of your ₹99 deposit is subtracted from your full project invoice.</p>
+            </div>
+          </div>
+
+          <!-- CTA Row -->
+          <div class="demo-banner-cta-row">
+            <a href="book-demo.html" class="demo-banner-cta-btn">
+              <span>Book Demo</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <div class="demo-banner-guarantee">
+              <span class="check-pill">✓ Zero Full Obligation</span>
+              <span class="check-pill">✓ Direct Founder Consultation</span>
+              <span class="check-pill">✓ 100% Adjustable against Project</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <!-- ═══════════════════════════════════════════
@@ -556,134 +694,62 @@
     <section class="team-section" id="team">
       <div class="container">
         <div style="text-align: center;" class="reveal">
-          <span class="section-badge">Our Team</span>
-          <h2 class="section-title">Team Behind Wonders</h2>
+          <span class="section-badge">Leadership</span>
+          <h2 class="section-title">Founder & Visionary</h2>
         </div>
 
-        <div class="team__grid">
-          <!-- Member 1 -->
-          <div class="team-slide reveal">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
+        <div class="founder-showcase reveal">
+          <div class="founder-card">
+            <!-- Left / Top: Founder Portrait -->
+            <div class="founder-card__media">
+              <div class="founder-card__glow"></div>
+              <div class="founder-card__img-wrapper">
+                <img src="assets/team/agam-singh.jpg" alt="Agam Singh — Founder & CEO of AGMIEX" class="founder-card__img" />
+                <div class="founder-card__badge">
+                  <svg viewBox="0 0 24 24" class="founder-card__badge-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  <span>Verified Founder</span>
+                </div>
+              </div>
             </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Tushar Rawat</span>
-              <span class="team-slide__role">Founder</span>
-            </div>
-          </div>
 
-          <!-- Member 2 -->
-          <div class="team-slide reveal reveal-delay-1">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Aastha Negi</span>
-              <span class="team-slide__role">Co-founder</span>
-            </div>
-          </div>
+            <!-- Right / Bottom: Executive Bio & Vision -->
+            <div class="founder-card__content">
+              <span class="founder-card__tag">Founder & CEO, AGMIEX</span>
+              <h3 class="founder-card__name">Agam Singh</h3>
+              <p class="founder-card__quote">
+                “We don't just write code — we architect digital products that drive measurable revenue. Every solution we ship is built for performance, security, and long-term scalability.”
+              </p>
 
-          <!-- Member 3 -->
-          <div class="team-slide reveal reveal-delay-2">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Aditya Agarwal</span>
-              <span class="team-slide__role">Chief Operations Head</span>
-            </div>
-          </div>
+              <div class="founder-card__highlights">
+                <div class="founder-card__highlight-item">
+                  <span class="founder-card__check">✓</span>
+                  <span>100% Source Code Ownership</span>
+                </div>
+                <div class="founder-card__highlight-item">
+                  <span class="founder-card__check">✓</span>
+                  <span>Full-Stack Engineering Leadership</span>
+                </div>
+                <div class="founder-card__highlight-item">
+                  <span class="founder-card__check">✓</span>
+                  <span>Direct Founder Consultation</span>
+                </div>
+              </div>
 
-          <!-- Member 4 -->
-          <div class="team-slide reveal">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Utkarsh Rajoriya</span>
-              <span class="team-slide__role">Full Stack Developer</span>
-            </div>
-          </div>
+              <div class="founder-card__footer">
+                <a href="#contact" class="founder-card__cta">
+                  <span>Connect with Agam</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
 
-          <!-- Member 5 -->
-          <div class="team-slide reveal reveal-delay-1">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Yatendra Sharma</span>
-              <span class="team-slide__role">Flutter Developer</span>
-            </div>
-          </div>
-
-          <!-- Member 6 -->
-          <div class="team-slide reveal reveal-delay-2">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Mansingh</span>
-              <span class="team-slide__role">Full Stack Developer</span>
-            </div>
-          </div>
-
-          <!-- Member 7 -->
-          <div class="team-slide reveal">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Deepak Kumar</span>
-              <span class="team-slide__role">Flutter Developer</span>
-            </div>
-          </div>
-
-          <!-- Member 8 -->
-          <div class="team-slide reveal reveal-delay-1">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Manish Das Sharma</span>
-              <span class="team-slide__role">Chief Technical Officer</span>
-            </div>
-          </div>
-
-          <!-- Member 9 -->
-          <div class="team-slide reveal reveal-delay-2">
-            <div class="team-slide__avatar">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </div>
-            <div class="team-slide__info">
-              <span class="team-slide__name">Harsh Gupta</span>
-              <span class="team-slide__role">Tech Lead</span>
+                <div class="founder-card__socials">
+                  <a href="#contact" class="founder-card__social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5V13.2a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                  </a>
+                  <a href="#contact" class="founder-card__social-link" aria-label="X / Twitter">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1016,6 +1082,8 @@
   <!-- Script links -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/main.js"></script>
+  <script src="js/payment-button.js"></script>
+  <script src="js/demo-timer.js"></script>
 </body>
 
 </html>
