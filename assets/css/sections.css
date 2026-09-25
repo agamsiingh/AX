@@ -1,0 +1,355 @@
+/* ═══════════════════════════════════════════
+   AGMIEX — Work, about, trust, FAQ and contact sections
+   ═══════════════════════════════════════════ */
+
+/* ─── Work / case studies ─── */
+.work-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.case-card__cover {
+  aspect-ratio: 16 / 10;
+  border-bottom: 1px solid var(--line);
+  background: #0a0f1c;
+}
+
+.case-card__cover svg {
+  width: 100%;
+  height: 100%;
+}
+
+.case-card__body {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.case-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.case-card h3 {
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.case-card p {
+  color: var(--text-2);
+  font-size: 0.9375rem;
+}
+
+.work-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+
+.work-cta p {
+  color: var(--text-2);
+}
+
+.work-cta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (min-width: 720px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ─── About ─── */
+.about-grid {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.founder {
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.founder__frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  aspect-ratio: 1;
+}
+
+.founder__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder__caption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(7, 9, 14, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: #fff;
+}
+
+.founder__caption strong {
+  display: block;
+  font-weight: 600;
+}
+
+.founder__caption span {
+  font-size: 0.8125rem;
+  color: #c3cad8;
+}
+
+.founder__caption .icon {
+  width: 20px;
+  height: 20px;
+  color: #7aa7ff;
+}
+
+.about-copy > p {
+  margin-top: 1.25rem;
+  color: var(--text-2);
+  font-size: 1.0625rem;
+  max-width: 60ch;
+}
+
+.founder-quote {
+  margin-top: 2rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--accent-text);
+}
+
+.founder-quote p {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.35rem);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.founder-quote footer {
+  margin-top: 0.75rem;
+  color: var(--text-3);
+  font-size: 0.875rem;
+}
+
+.about-facts {
+  display: grid;
+  gap: 1px;
+  margin-top: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--line);
+}
+
+.about-facts div {
+  padding: 0.9rem 1rem;
+  background: var(--bg);
+}
+
+.about-facts dt {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.about-facts dd {
+  margin-top: 0.25rem;
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .about-facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}
+
+/* ─── Why AGMIEX ─── */
+.why-grid {
+  display: grid;
+  gap: 1px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--line);
+}
+
+.why-item {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: var(--bg-subtle);
+}
+
+.why-item h3 {
+  margin-top: 0.4rem;
+  font-size: 1.125rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+.why-item p {
+  color: var(--text-2);
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 640px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ─── Testimonials (honest empty state) ─── */
+.reviews-empty {
+  display: grid;
+}
+
+.reviews-empty > * {
+  grid-area: 1 / 1;
+}
+
+.reviews-ghosts {
+  display: grid;
+  gap: 1rem;
+  opacity: 0.55;
+  -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent 95%);
+  mask-image: linear-gradient(180deg, #000 20%, transparent 95%);
+}
+
+.ghost-card {
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+  min-height: 280px;
+  padding: 1.75rem;
+}
+
+.ghost-card i {
+  display: block;
+  height: 10px;
+  border-radius: 6px;
+  background: var(--surface-2);
+}
+
+.ghost-card .ghost-card__quote {
+  width: 28px;
+  height: 22px;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  background: var(--accent-soft);
+}
+
+.ghost-card__person {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.ghost-card__person b {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface-2);
+}
+
+.reviews-panel {
+  position: relative;
+  z-index: 1;
+  place-self: center;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  max-width: 540px;
+  margin: 2rem 0;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.reviews-panel h3 {
+  font-size: 1.375rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.reviews-panel p {
+  color: var(--text-2);
+}
+
+.ghost-card:nth-child(n + 2) {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .reviews-ghosts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ghost-card:nth-child(n + 2) {
+    display: grid;
+  }
+}

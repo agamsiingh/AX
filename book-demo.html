@@ -1,360 +1,443 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>₹99 Website Demo — See Your New Homepage First | AGMIEX</title>
+  <meta name="description" content="Share your requirements and AGMIEX will design a personalised homepage concept in 24–48 hours for ₹99 — adjusted against your invoice if you go ahead.">
+  <link rel="canonical" href="https://agmiex.com/book-demo.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#07090e">
+  <meta name="color-scheme" content="light dark">
 
-  <!-- Primary Meta Tags -->
-  <title>Book Your Website Demo — AGMIEX | Try Your Homepage for Just ₹99</title>
-  <meta name="description"
-    content="See a custom, revenue-driven homepage mockup for your business before committing to full development. Book your ₹99 adjustable demo today. 24–48 hour turnaround." />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AGMIEX">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:url" content="https://agmiex.com/book-demo.html">
+  <meta property="og:title" content="₹99 Website Demo — See Your New Homepage First | AGMIEX">
+  <meta property="og:description" content="A personalised homepage concept for your business in 24–48 hours. The ₹99 is adjusted against your project if you go ahead.">
+  <meta property="og:image" content="https://agmiex.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AGMIEX — Software, AI and automation built for how your business works.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="₹99 Website Demo — See Your New Homepage First | AGMIEX">
+  <meta name="twitter:description" content="A personalised homepage concept for your business in 24–48 hours. The ₹99 is adjusted against your project if you go ahead.">
+  <meta name="twitter:image" content="https://agmiex.com/assets/img/og-image.jpg">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/sections.css" />
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+      d.classList.add('js');
+      window.addEventListener('load', function () {
+        setTimeout(function () { if (!d.classList.contains('js-ready')) d.classList.remove('js'); }, 3000);
+      });
+    })();
+  </script>
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- dev:start — unbundled source only: fetch the CSS partials in parallel. `npm run build` removes this block. -->
+  <link rel="preload" href="assets/css/fonts.css" as="style">
+  <link rel="preload" href="assets/css/tokens.css" as="style">
+  <link rel="preload" href="assets/css/base.css" as="style">
+  <link rel="preload" href="assets/css/layout.css" as="style">
+  <link rel="preload" href="assets/css/components.css" as="style">
+  <link rel="preload" href="assets/css/forms.css" as="style">
+  <link rel="preload" href="assets/css/hero.css" as="style">
+  <link rel="preload" href="assets/css/home.css" as="style">
+  <link rel="preload" href="assets/css/sections.css" as="style">
+  <link rel="preload" href="assets/css/contact.css" as="style">
+  <link rel="preload" href="assets/css/pages.css" as="style">
+  <!-- dev:end -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="assets/js/main.js" onerror="document.documentElement.classList.remove('js')"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://agmiex.com/book-demo.html#service",
+        "name": "Personalised website homepage demo",
+        "serviceType": "Website design",
+        "description": "A personalised homepage design concept for your business, delivered in 24–48 hours. The fee is adjusted against your invoice if you proceed with the full project.",
+        "provider": { "@type": "Organization", "@id": "https://agmiex.com/#organization", "name": "AGMIEX", "url": "https://agmiex.com/" },
+        "areaServed": "Worldwide",
+        "offers": {
+          "@type": "Offer",
+          "price": "99",
+          "priceCurrency": "INR",
+          "url": "https://agmiex.com/book-demo.html",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agmiex.com/" },
+          { "@type": "ListItem", "position": 2, "name": "₹99 website demo", "item": "https://agmiex.com/book-demo.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Why does the website demo cost ₹99?", "acceptedAnswer": { "@type": "Answer", "text": "The small fee helps us focus on serious enquiries while keeping the demo practically risk-free for you. If you go ahead with the full project, the ₹99 is adjusted against your final invoice." } },
+          { "@type": "Question", "name": "How long does it take to receive my demo?", "acceptedAnswer": { "@type": "Answer", "text": "Our typical turnaround is 24 to 48 hours after you submit your requirements and complete the ₹99 payment." } },
+          { "@type": "Question", "name": "What happens after I see the demo?", "acceptedAnswer": { "@type": "Answer", "text": "If you like the direction, we finalise the full scope of work, adjust the ₹99 against your invoice and begin development. If you decide not to proceed, there's no further obligation." } },
+          { "@type": "Question", "name": "Is the ₹99 really adjusted against the full project?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whatever the size of your final project, the ₹99 you paid for the demo is subtracted from your contract total." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <!-- ═══════════════════════════════════════════
-       MAIN DEDICATED BOOK DEMO CONTENT
-  ═══════════════════════════════════════════ -->
-  <main class="demo-page-wrapper">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- 1. HERO SECTION -->
-    <section class="demo-hero-section">
-      <div class="container">
-        <div class="demo-hero-content reveal">
-          <span class="demo-banner-badge">
-            <span class="demo-banner-badge-dot"></span>
-            Limited Time Offer — Just ₹99 Trial
-          </span>
-          <h1 class="demo-hero-title">
-            See Your Custom Homepage Before Investing in a Full Build
-          </h1>
-          <p class="demo-hero-subtitle">
-            Book a personalized, conversion-focused website demo for just <span class="highlight-price">₹99</span>. Delivered in 24–48 hours, fully adjustable when you proceed.
-          </p>
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="site-header" data-header data-overlay>
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="AGMIEX — home">
+        <img class="brand__logo" src="assets/img/agmiex-logo.png" width="336" height="102" alt="AGMIEX" decoding="async" fetchpriority="high">
+      </a>
 
-          <!-- URGENCY & SCARCITY BAR (ONLY 1 LEFT, ₹10,000 CUT PRICE, 30S TIMER) -->
-          <div class="demo-urgency-wrapper">
-            <div class="scarcity-badge-pulse">
-              <span class="scarcity-dot"></span>
-              🔥 Only 1 Slot Left Today!
-            </div>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" role="list">
+          <li><a class="site-nav__link" href="index.html#services">Services</a></li>
+          <li><a class="site-nav__link" href="index.html#solutions">Solutions</a></li>
+          <li><a class="site-nav__link" href="index.html#process">Process</a></li>
+          <li><a class="site-nav__link" href="index.html#work">Work</a></li>
+          <li><a class="site-nav__link" href="index.html#about">About</a></li>
+          <li><a class="site-nav__link" href="index.html#faq">FAQ</a></li>
+          <li><a class="site-nav__link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-            <div class="price-strikethrough-box">
-              <span class="price-old">₹10,000</span>
-              <span class="price-new-heavy">₹99</span>
-              <span class="discount-pill-tag">Heavy 99% Discount</span>
-            </div>
+      <div class="site-header__actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dark theme">
+          <svg class="icon theme-toggle__moon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-moon"></use></svg>
+          <svg class="icon theme-toggle__sun" aria-hidden="true"><use href="assets/icons/sprite.svg#i-sun"></use></svg>
+        </button>
+        <a class="btn btn--primary btn--sm site-header__cta" href="#request-form">Book demo</a>
+        <button class="icon-btn menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
 
-            <div class="timer-box-30s">
-              <span>⏱️ Offer Expires In:</span>
-              <span class="timer-digits-30s demo-30s-timer">00:30</span>
-            </div>
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+      <nav aria-label="Mobile">
+        <ul class="mobile-menu__list" role="list">
+          <li><a href="index.html"><span>01</span>Home</a></li>
+          <li><a href="index.html#services"><span>02</span>Services</a></li>
+          <li><a href="index.html#solutions"><span>03</span>Solutions</a></li>
+          <li><a href="index.html#work"><span>04</span>Work</a></li>
+          <li><a href="index.html#about"><span>05</span>About</a></li>
+          <li><a href="index.html#contact"><span>06</span>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu__footer">
+        <a class="btn btn--primary btn--lg btn--block" href="#request-form">Book your ₹99 demo</a>
+        <a class="btn btn--ghost btn--lg btn--block btn--wa" href="https://wa.me/918534855501" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>
+          WhatsApp us
+        </a>
+        <p class="mobile-menu__contact">or email <a href="mailto:agamsbusiness@gmail.com">agamsbusiness@gmail.com</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero on-dark" aria-labelledby="demo-title">
+      <div class="hero__backdrop" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <nav class="breadcrumbs hero__rise" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li aria-current="page">₹99 website demo</li>
+            </ol>
+          </nav>
+          <h1 class="display hero__rise" id="demo-title" style="--d: 80ms">See your new homepage <span class="soft">before you commit.</span></h1>
+          <p class="lead hero__rise" style="--d: 160ms">Tell us about your business and we’ll design a personalised homepage concept in 24–48 hours. Like it? The ₹99 is adjusted against your full project. Not for you? There’s no further obligation.</p>
+          <div class="hero__actions hero__rise" style="--d: 240ms">
+            <a class="btn btn--primary btn--lg" href="#request-form">
+              Share your requirements
+              <svg class="icon icon--nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#how-it-works">How it works</a>
           </div>
+          <ul class="assurances hero__rise" role="list" style="--d: 320ms">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>24–48 hour delivery</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Adjusted against your project</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Reviewed by the founder</li>
+          </ul>
+        </div>
 
-          <div class="demo-hero-trust-row">
-            <span>✔ 100% Adjustable Fee</span>
-            <span>✔ 24–48 Hour Turnaround</span>
-            <span>✔ No Full Obligation</span>
-            <span>✔ Direct Founder Supervision</span>
+        <div class="price-card hero__rise" style="--d: 200ms">
+          <p class="price-card__label" id="price-title">Personalised homepage demo</p>
+          <p class="price-card__price"><span class="price-card__currency">₹</span>99</p>
+          <p class="price-card__note">One-time fee, fully adjusted against your invoice if you go ahead with the full build.</p>
+          <ul class="checklist" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Custom homepage concept for your brand</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Desktop and mobile previews</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Walkthrough call with the founder</li>
+          </ul>
+          <a class="btn btn--primary btn--lg btn--block" href="#request-form">Start with your requirements</a>
+          <p class="secure-note"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-lock"></use></svg>Payments processed securely by Razorpay</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ HOW IT WORKS ═══════════ -->
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section-head section-head--split" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow__index">01</span>How it works</p>
+            <h2 class="section-title" id="how-title">From brief to homepage concept in five steps.</h2>
+          </div>
+          <p class="lead">A short, low-risk way to see how we think about your brand, your customers and conversions — before you invest in the full build.</p>
+        </header>
+
+        <ol class="process" data-reveal-group>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 01</span>
+            <h3>Share your requirements</h3>
+            <p>Tell us about your business, your customers and the style you like, using the form below.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 02</span>
+            <h3>Confirm with ₹99</h3>
+            <p>Complete the ₹99 payment on Razorpay’s secure checkout to reserve your design slot.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 03</span>
+            <h3>We design your homepage</h3>
+            <p>The founder reviews your brief and we craft a tailored homepage concept within 24–48 hours.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 04</span>
+            <h3>Review together</h3>
+            <p>Walk through the design on a call and share feedback or requested refinements.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 05</span>
+            <h3>Go ahead — or don’t</h3>
+            <p>Love it? We scope the full build and deduct ₹99 from your invoice. If not, there’s no further obligation.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════ WHAT'S INCLUDED ═══════════ -->
+    <section class="section section--subtle" aria-labelledby="included-title">
+      <div class="container">
+        <header class="section-head section-head--center" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__index">02</span>What you receive</p>
+          <h2 class="section-title" id="included-title">Everything included in your ₹99 demo.</h2>
+        </header>
+
+        <div class="included-grid" data-reveal-group>
+          <div class="card included-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-layout"></use></svg></span>
+            <div><h3>Brand-tailored layout</h3><p>A homepage concept designed around your industry, your offer and what your customers need to see first.</p></div>
+          </div>
+          <div class="card included-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-smartphone"></use></svg></span>
+            <div><h3>Mobile preview</h3><p>See exactly how the page will feel on a phone, where most of your visitors will arrive.</p></div>
+          </div>
+          <div class="card included-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-zap"></use></svg></span>
+            <div><h3>Conversion-focused structure</h3><p>A clear headline, calls to action and visual hierarchy built to turn visitors into enquiries.</p></div>
+          </div>
+          <div class="card included-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-palette"></use></svg></span>
+            <div><h3>Colours &amp; typography</h3><p>A palette and type pairing chosen to match your brand, ready to carry through the full website.</p></div>
+          </div>
+          <div class="card included-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user"></use></svg></span>
+            <div><h3>Founder consultation</h3><p>A one-on-one review with Agam Singh to talk through the design and your roadmap.</p></div>
+          </div>
+          <div class="card included-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-card"></use></svg></span>
+            <div><h3>Fee fully adjusted</h3><p>If you go ahead with the project, the ₹99 is credited in full against your final invoice.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- 2. HOW IT WORKS — 5-STEP TIMELINE -->
-    <section class="demo-timeline-section">
-      <div class="container">
-        <div style="text-align: center;" class="reveal">
-          <span class="section-badge">How It Works</span>
-          <h2 class="section-title">Your 5-Step Path to a Premium Website</h2>
+    <!-- ═══════════ REQUEST FORM ═══════════ -->
+    <section class="section" id="request-form" aria-labelledby="form-title">
+      <div class="container demo-form-layout">
+        <div data-reveal>
+          <p class="eyebrow"><span class="eyebrow__index">03</span>Your brief</p>
+          <h2 class="section-title" id="form-title" style="margin-top: 1rem">Tell us about your business.</h2>
+          <p class="lead" style="margin-top: 1.25rem">The more we know, the more personal your homepage concept will be.</p>
+          <ol class="next-steps">
+            <li><div><strong>Submit this form</strong><span>Your requirements are saved securely for our design team.</span></div></li>
+            <li><div><strong>Pay ₹99 on Razorpay</strong><span>You’ll get a secure payment link as soon as your brief is saved.</span></div></li>
+            <li><div><strong>Receive your concept</strong><span>We’ll share your homepage demo on WhatsApp or email within 24–48 hours.</span></div></li>
+          </ol>
         </div>
 
-        <div class="timeline-grid-5">
-          <div class="timeline-card reveal">
-            <div class="timeline-step-num">01</div>
-            <h3 class="timeline-step-title">Submit Request Form</h3>
-            <p class="timeline-step-desc">Tell us about your business, target audience, and preferred design style.</p>
-          </div>
-
-          <div class="timeline-card reveal reveal-delay-1">
-            <div class="timeline-step-num">02</div>
-            <h3 class="timeline-step-title">Discovery & Alignment</h3>
-            <p class="timeline-step-desc">Our founder reviews your requirements to align on your revenue & brand goals.</p>
-          </div>
-
-          <div class="timeline-card reveal reveal-delay-2">
-            <div class="timeline-step-num">03</div>
-            <h3 class="timeline-step-title">Custom Homepage Crafting</h3>
-            <p class="timeline-step-desc">We design a tailored, high-converting homepage mockup in 24–48 hours.</p>
-          </div>
-
-          <div class="timeline-card reveal reveal-delay-3">
-            <div class="timeline-step-num">04</div>
-            <h3 class="timeline-step-title">Interactive Demo Review</h3>
-            <p class="timeline-step-desc">Walk through the live design preview and request feedback or refinements.</p>
-          </div>
-
-          <div class="timeline-card reveal reveal-delay-4">
-            <div class="timeline-step-num">05</div>
-            <h3 class="timeline-step-title">Full Project Kickoff</h3>
-            <p class="timeline-step-desc">Love the design? We proceed to full build and deduct ₹99 from your invoice.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 3. WHAT'S INCLUDED -->
-    <section class="demo-included-section">
-      <div class="container">
-        <div style="text-align: center;" class="reveal">
-          <span class="section-badge">What You Receive</span>
-          <h2 class="section-title">Everything Included in Your ₹99 Demo</h2>
-        </div>
-
-        <div class="included-grid">
-          <div class="included-card reveal">
-            <div class="included-check">✓</div>
-            <div>
-              <h3 class="included-title">Custom Brand-Tailored Layout</h3>
-              <p class="included-desc">Unique homepage design built around your industry's conversion psychology.</p>
+        <div class="card contact-card" data-form-card data-reveal>
+          <form class="form-grid" id="demo-form" data-form="demo" novalidate>
+            <div class="field">
+              <label class="field__label" for="demo-name">Full name</label>
+              <input class="input" id="demo-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="150" data-label="your name" aria-describedby="demo-name-error">
+              <p class="field__error" id="demo-name-error"></p>
             </div>
-          </div>
-
-          <div class="included-card reveal reveal-delay-1">
-            <div class="included-check">✓</div>
-            <div>
-              <h3 class="included-title">Responsive Smartphone Mockup</h3>
-              <p class="included-desc">Preview exactly how your customers will experience your site on mobile devices.</p>
+            <div class="field">
+              <label class="field__label" for="demo-business">Business name</label>
+              <input class="input" id="demo-business" name="business" type="text" autocomplete="organization" required minlength="2" maxlength="150" data-label="your business name" aria-describedby="demo-business-error">
+              <p class="field__error" id="demo-business-error"></p>
             </div>
-          </div>
-
-          <div class="included-card reveal reveal-delay-2">
-            <div class="included-check">✓</div>
-            <div>
-              <h3 class="included-title">High-Converting Hero & CTA Structure</h3>
-              <p class="included-desc">Optimized copywriting & visual hierarchy designed to maximize leads and sales.</p>
+            <div class="field field--full">
+              <label class="field__label" for="demo-email">Email</label>
+              <input class="input" id="demo-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" data-label="your email address" aria-describedby="demo-email-error">
+              <p class="field__error" id="demo-email-error"></p>
             </div>
-          </div>
-
-          <div class="included-card reveal">
-            <div class="included-check">✓</div>
-            <div>
-              <h3 class="included-title">Curated Color Palette & Modern Fonts</h3>
-              <p class="included-desc">Executive aesthetics using Google typography and polished glassmorphism.</p>
+            <div class="field">
+              <label class="field__label" for="demo-phone">Phone number</label>
+              <input class="input" id="demo-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" pattern="[0-9+()\s\-]{7,20}" data-label="your phone number" data-pattern-message="Please enter a valid phone number, e.g. +91 98765 43210." aria-describedby="demo-phone-error">
+              <p class="field__error" id="demo-phone-error"></p>
             </div>
-          </div>
-
-          <div class="included-card reveal reveal-delay-1">
-            <div class="included-check">✓</div>
-            <div>
-              <h3 class="included-title">Direct Founder Consultation</h3>
-              <p class="included-desc">One-on-one architecture review with Agam Singh to discuss your product roadmap.</p>
+            <div class="field">
+              <label class="field__label" for="demo-whatsapp">WhatsApp number</label>
+              <input class="input" id="demo-whatsapp" name="whatsapp" type="tel" inputmode="tel" required maxlength="20" pattern="[0-9+()\s\-]{7,20}" data-label="your WhatsApp number" data-pattern-message="Please enter a valid WhatsApp number, e.g. +91 98765 43210." aria-describedby="demo-whatsapp-hint demo-whatsapp-error">
+              <label class="checkbox"><input type="checkbox" data-mirror-source="demo-phone" data-mirror-target="demo-whatsapp"> Same as phone</label>
+              <p class="field__hint" id="demo-whatsapp-hint">We’ll send your demo here.</p>
+              <p class="field__error" id="demo-whatsapp-error"></p>
             </div>
-          </div>
-
-          <div class="included-card reveal reveal-delay-2">
-            <div class="included-check">✓</div>
-            <div>
-              <h3 class="included-title">100% Fee Adjustment Guarantee</h3>
-              <p class="included-desc">Your ₹99 deposit is fully credited toward your final project invoice with zero loss.</p>
+            <div class="field field--full">
+              <label class="field__label" for="demo-budget">Expected project budget <span class="optional">(optional)</span></label>
+              <div class="select-wrap">
+                <select class="input" id="demo-budget" name="budget">
+                  <option value="">Select a range</option>
+                  <option value="< ₹50,000">Under ₹50,000</option>
+                  <option value="₹50,000 - ₹1,00,000">₹50,000 – ₹1,00,000</option>
+                  <option value="₹1,00,000 - ₹3,00,000">₹1,00,000 – ₹3,00,000</option>
+                  <option value="₹3,00,000+">₹3,00,000+</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 4. DEMO REQUEST FORM -->
-    <section class="demo-form-section" id="request-form">
-      <div class="container">
-        <div class="demo-form-card reveal">
-          <div class="demo-form-header">
-            <h2 class="demo-form-title">Submit Your Demo Requirements</h2>
-            <p class="demo-form-subtitle">
-              Fill in the details below so our engineering team can architect a homepage tailored to your business goals.
-            </p>
-          </div>
-
-          <div id="form-success-box" class="demo-form-success" style="display: none;">
-            <div class="success-icon">✓</div>
-            <h3>Requirements Saved Successfully!</h3>
-            <p style="margin-top: 10px; color: rgba(255,255,255,0.85);">
-              Thank you! Your requirements have been logged for our design sprint. Proceed below to complete your ₹99 refundable deposit to kick off development.
-            </p>
-            <div style="margin-top: 24px;">
-              <a href="https://rzp.io/rzp/GdtBvmmE" target="_blank" rel="noopener noreferrer" class="payment-btn" data-amount="99">
-                <span>Proceed to Payment ₹99</span>
-              </a>
-            </div>
-          </div>
-
-          <form id="demo-requirements-form" class="demo-form-grid">
-            <div class="form-group">
-              <label for="demo-name">Your Full Name *</label>
-              <input type="text" id="demo-name" name="name" required placeholder="e.g. Rahul Sharma" />
+            <div class="field field--full">
+              <label class="field__label" for="demo-requirements">Requirements &amp; vision</label>
+              <textarea class="input" id="demo-requirements" name="requirements" rows="5" required minlength="20" maxlength="3000" data-label="a short description of your requirements" placeholder="Who are your customers, what do you offer, which colours do you like, and are there websites you admire?" aria-describedby="demo-requirements-error"></textarea>
+              <p class="field__error" id="demo-requirements-error"></p>
             </div>
 
-            <div class="form-group">
-              <label for="demo-business">Business / Company Name *</label>
-              <input type="text" id="demo-business" name="business" required placeholder="e.g. Apex Tech Solutions" />
+            <div class="hp-field" aria-hidden="true">
+              <label for="demo-website">Leave this field empty</label>
+              <input id="demo-website" name="website" type="text" tabindex="-1" autocomplete="off">
             </div>
 
-            <div class="form-group">
-              <label for="demo-email">Email Address *</label>
-              <input type="email" id="demo-email" name="email" required placeholder="name@company.com" />
+            <div class="alert alert--error field--full" role="alert" data-form-error hidden>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-alert"></use></svg>
+              <div>
+                <strong>We couldn’t save your requirements.</strong>
+                <span data-error-message>Something went wrong. Please try again.</span>
+                <div class="alert__actions">
+                  <a class="btn btn--sm btn--ghost btn--wa" data-error-link="whatsapp" href="https://wa.me/918534855501" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>Send them on WhatsApp</a>
+                  <a class="btn btn--sm btn--ghost payment-btn" data-error-link="payment" href="https://rzp.io/rzp/GdtBvmmE" target="_blank" rel="noopener">Continue to payment</a>
+                </div>
+              </div>
             </div>
 
-            <div class="form-group">
-              <label for="demo-phone">Phone Number *</label>
-              <input type="tel" id="demo-phone" name="phone" required placeholder="+91 98765 43210" />
-            </div>
-
-            <div class="form-group">
-              <label for="demo-whatsapp">WhatsApp Number (For instant delivery) *</label>
-              <input type="tel" id="demo-whatsapp" name="whatsapp" required placeholder="+91 98765 43210" />
-            </div>
-
-            <div class="form-group">
-              <label for="demo-budget">Expected Project Budget</label>
-              <select id="demo-budget" name="budget">
-                <option value="< ₹50,000">&lt; ₹50,000</option>
-                <option value="₹50,000 - ₹1,00,000" selected>₹50,000 — ₹1,00,000</option>
-                <option value="₹1,00,000 - ₹3,00,000">₹1,00,000 — ₹3,00,000</option>
-                <option value="₹3,00,000+">₹3,00,000+ (Enterprise)</option>
-              </select>
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="demo-requirements">Project Requirements & Vision *</label>
-              <textarea id="demo-requirements" name="requirements" rows="4" required
-                placeholder="Describe your target customers, key services, preferred colors, or reference websites you admire..."></textarea>
-            </div>
-
-            <div class="form-group form-group--full" style="text-align: center; margin-top: 10px;">
-              <button type="submit" class="demo-form-submit-btn">
-                Save Requirements & Continue to Payment
+            <div class="form-actions field--full">
+              <button class="btn btn--primary btn--lg btn--block" type="submit">
+                Save &amp; continue to payment
+                <svg class="icon icon--nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>
               </button>
+              <p class="form-footnote">By submitting, you agree to our <a href="terms.html">terms</a> and <a href="privacy-policy.html">privacy policy</a>.</p>
             </div>
           </form>
-        </div>
-      </div>
-    </section>
 
-
-    <!-- 5. FAQ SECTION -->
-    <section class="demo-faq-section">
-      <div class="container">
-        <div style="text-align: center;" class="reveal">
-          <span class="section-badge">Questions?</span>
-          <h2 class="section-title">Frequently Asked Questions</h2>
-        </div>
-
-        <div class="demo-faq-list">
-          <details class="demo-faq-item" open>
-            <summary class="demo-faq-q">
-              <span>Why is the website demo priced at ₹99?</span>
-              <span class="demo-faq-chevron">+</span>
-            </summary>
-            <div class="demo-faq-a">
-              We charge ₹99 to filter out non-serious inquiries while keeping the barrier virtually risk-free for ambitious entrepreneurs. Plus, 100% of the ₹99 is credited to your final invoice when we build your project.
+          <div class="result-panel" data-form-success hidden>
+            <span class="result-panel__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+            <h3 data-focus>Requirements saved — one step to go.</h3>
+            <p>Complete your ₹99 payment on Razorpay to reserve your design slot. We’ll start on your homepage concept as soon as it’s confirmed.</p>
+            <div class="result-panel__actions">
+              <a class="btn btn--primary btn--lg payment-btn" href="https://rzp.io/rzp/GdtBvmmE" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-card"></use></svg>
+                Pay ₹99 securely
+              </a>
             </div>
-          </details>
-
-          <details class="demo-faq-item">
-            <summary class="demo-faq-q">
-              <span>How long does it take to receive my demo?</span>
-              <span class="demo-faq-chevron">+</span>
-            </summary>
-            <div class="demo-faq-a">
-              Our typical turnaround time is 24 to 48 hours after you submit your requirements form and complete the ₹99 deposit.
-            </div>
-          </details>
-
-          <details class="demo-faq-item">
-            <summary class="demo-faq-q">
-              <span>What happens after I see the demo?</span>
-              <span class="demo-faq-chevron">+</span>
-            </summary>
-            <div class="demo-faq-a">
-              If you love the design, we finalize the full scope of work, deduct ₹99 from your invoice, and begin development. If you decide not to proceed, there is zero obligation to continue.
-            </div>
-          </details>
-
-          <details class="demo-faq-item">
-            <summary class="demo-faq-q">
-              <span>Is the ₹99 truly adjustable against the full project?</span>
-              <span class="demo-faq-chevron">+</span>
-            </summary>
-            <div class="demo-faq-a">
-              Yes, absolutely! Whether your final project is ₹50,000 or ₹5,00,000, the exact ₹99 fee is subtracted from your contract total.
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 6. TRUST BADGES BAR -->
-    <section class="demo-trust-bar">
-      <div class="container">
-        <div class="trust-badges-row">
-          <div class="trust-badge-item">
-            <span class="check-icon">✓</span>
-            <span>100% Adjustable Fee</span>
-          </div>
-          <div class="trust-badge-item">
-            <span class="check-icon">✓</span>
-            <span>24–48 Hour Turnaround</span>
-          </div>
-          <div class="trust-badge-item">
-            <span class="check-icon">✓</span>
-            <span>No Full Obligation</span>
-          </div>
-          <div class="trust-badge-item">
-            <span class="check-icon">✓</span>
-            <span>Direct Founder Supervision</span>
-          </div>
-          <div class="trust-badge-item">
-            <span class="check-icon">✓</span>
-            <span>Secure Payments</span>
+            <p class="secure-note"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-lock"></use></svg>Opens Razorpay’s secure checkout in a new tab</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══════════ FAQ ═══════════ -->
+    <section class="section section--subtle" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="faq-aside" data-reveal>
+          <header class="section-head">
+            <p class="eyebrow"><span class="eyebrow__index">04</span>FAQ</p>
+            <h2 class="section-title" id="faq-title">Questions about the demo</h2>
+          </header>
+          <div class="card help-card">
+            <p><strong>Something else on your mind?</strong> Ask on WhatsApp and we’ll reply personally.</p>
+            <div class="help-card__actions">
+              <a class="btn btn--ghost btn--sm btn--wa" href="https://wa.me/918534855501?text=Hi%20AGMIEX%2C%20I%20have%20a%20question%20about%20the%20%E2%82%B999%20website%20demo." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>WhatsApp</a>
+              <a class="btn btn--ghost btn--sm" href="mailto:agamsbusiness@gmail.com"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-mail"></use></svg>Email</a>
+            </div>
+          </div>
+        </div>
 
-    <!-- 7. FINAL CTA WITH REUSABLE PAYMENTBUTTON -->
-    <section class="demo-final-cta-section">
+        <div class="faq-list" data-accordion data-accordion-single data-reveal>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="dfaq-1-btn" aria-expanded="true" aria-controls="dfaq-1">Why does the website demo cost ₹99?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="dfaq-1" role="region" aria-labelledby="dfaq-1-btn"><div class="faq-item__body"><p>The small fee helps us focus on serious enquiries while keeping the demo practically risk-free for you. If you go ahead with the full project, the ₹99 is adjusted against your final invoice.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="dfaq-2-btn" aria-expanded="false" aria-controls="dfaq-2">How long does it take to receive my demo?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="dfaq-2" role="region" aria-labelledby="dfaq-2-btn"><div class="faq-item__body"><p>Our typical turnaround is 24 to 48 hours after you submit your requirements and complete the ₹99 payment.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="dfaq-3-btn" aria-expanded="false" aria-controls="dfaq-3">What happens after I see the demo?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="dfaq-3" role="region" aria-labelledby="dfaq-3-btn"><div class="faq-item__body"><p>If you like the direction, we finalise the full scope of work, adjust the ₹99 against your invoice and begin development. If you decide not to proceed, there’s no further obligation.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="dfaq-4-btn" aria-expanded="false" aria-controls="dfaq-4">Is the ₹99 really adjusted against the full project?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="dfaq-4" role="region" aria-labelledby="dfaq-4-btn"><div class="faq-item__body"><p>Yes. Whatever the size of your final project, the ₹99 you paid for the demo is subtracted from your contract total.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FINAL CTA ═══════════ -->
+    <section class="section" aria-labelledby="final-title">
       <div class="container">
-        <div class="demo-final-cta-card reveal">
-          <div class="demo-final-glow"></div>
-          <h2 class="demo-final-title">
-            Ready to See Your Brand's New Revenue-Driven Homepage?
-          </h2>
-          <p class="demo-final-subtitle">
-            Secure your 24–48 hour design slot today. Your ₹99 deposit is fully credited toward your full development build.
-          </p>
-          <div class="demo-final-btn-wrapper">
-            <!-- REUSABLE PAYMENT BUTTON (Live Razorpay Integration) -->
-            <a href="https://rzp.io/rzp/GdtBvmmE" target="_blank" rel="noopener noreferrer" class="payment-btn" data-amount="99" data-url="https://rzp.io/rzp/GdtBvmmE">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-              <span>Proceed to Payment ₹99</span>
+        <div class="offer on-dark" data-reveal>
+          <div>
+            <p class="eyebrow">Ready when you are</p>
+            <h2 class="offer__title" id="final-title">See your brand’s new homepage in <span class="offer__price">24–48 hours</span>.</h2>
+            <p class="offer__text">Share your brief, confirm with ₹99 and we’ll get to work. The fee is credited in full against your project if you go ahead.</p>
+          </div>
+          <div class="offer__actions">
+            <a class="btn btn--light btn--lg" href="#request-form">
+              Share your requirements
+              <svg class="icon icon--nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>
             </a>
-          </div>
-          <div class="demo-final-guarantee">
-            <span>🔒 256-Bit Encrypted Sandbox Checkout</span> • 
-            <span>⚡ Immediate Sprint Kickoff</span>
+            <a class="btn btn--ghost btn--lg payment-btn" href="https://rzp.io/rzp/GdtBvmmE" target="_blank" rel="noopener">Already sent your brief? Pay ₹99</a>
+            <p class="offer__note"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-lock"></use></svg>Secure checkout by Razorpay</p>
           </div>
         </div>
       </div>
@@ -362,69 +445,76 @@
 
   </main>
 
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════ -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="index.html" class="logo">
-          <img src="logo/AGMIEX (6).png" alt="AGMIEX" />
-        </a>
-        <p class="footer__tagline">Architecting high-converting digital products that scale with confidence.</p>
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="site-footer on-dark">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AGMIEX — home">
+            <img class="brand__logo" src="assets/img/agmiex-logo.png" width="336" height="102" alt="AGMIEX" loading="lazy" decoding="async">
+          </a>
+          <p class="footer-brand__text">A founder-led IT services studio in Agra, India — building AI, web, mobile and custom software for growing businesses.</p>
+          <div class="footer-socials">
+            <a class="icon-btn" href="https://instagram.com/agmiex" target="_blank" rel="noopener" aria-label="AGMIEX on Instagram"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-instagram"></use></svg></a>
+            <a class="icon-btn" href="https://wa.me/918534855501" target="_blank" rel="noopener" aria-label="Chat with AGMIEX on WhatsApp"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg></a>
+            <a class="icon-btn" href="mailto:agamsbusiness@gmail.com" aria-label="Email AGMIEX"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-mail"></use></svg></a>
+          </div>
+        </div>
+
+        <nav class="footer-col" aria-labelledby="footer-services">
+          <h3 id="footer-services">Services</h3>
+          <ul role="list">
+            <li><a href="index.html#ai-genai">AI &amp; GenAI Solutions</a></li>
+            <li><a href="index.html#ai-agents">AI Agents &amp; Automation</a></li>
+            <li><a href="index.html#web-development">Web Development</a></li>
+            <li><a href="index.html#mobile-apps">Mobile Apps</a></li>
+            <li><a href="index.html#power-bi">Power BI &amp; Analytics</a></li>
+            <li><a href="index.html#custom-software">Custom Software</a></li>
+            <li><a href="index.html#apis-backend">APIs &amp; Backend</a></li>
+            <li><a href="index.html#business-automation">Business Automation</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-labelledby="footer-company">
+          <h3 id="footer-company">Company</h3>
+          <ul role="list">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#process">Process</a></li>
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="book-demo.html">₹99 website demo</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul role="list">
+            <li><a href="mailto:agamsbusiness@gmail.com">agamsbusiness@gmail.com</a></li>
+            <li><a href="tel:+918534855501">+91 85348 55501</a></li>
+            <li><a href="https://wa.me/918534855501" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><address>Devri Rd, Phase 2, Defence Estate,<br>Agra, Uttar Pradesh 282001</address></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="footer__links">
-        <div class="footer__col">
-          <h4>Navigation</h4>
-          <a href="index.html#prebuilt">Prebuilt Solutions</a>
-          <a href="index.html#custom">Custom Development</a>
-          <a href="index.html#about">About Us</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
-        <div class="footer__col">
-          <h4>Demo Offer</h4>
-          <a href="book-demo.html">Book Website Demo (₹99)</a>
-          <a href="book-demo.html#request-form">Submit Requirements</a>
-          <a href="index.html#team">Meet Founder</a>
-        </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AGMIEX. All rights reserved.</p>
+        <nav aria-label="Legal">
+          <ul role="list">
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms.html">Terms &amp; conditions</a></li>
+            <li><a href="terms.html#payments-refunds">Refunds</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <div class="footer__bottom container">
-      <p>&copy; 2026 AGMIEX. All rights reserved.</p>
-    </div>
+
+    <a class="wa-float" href="https://wa.me/918534855501?text=Hi%20AGMIEX%2C%20I%27m%20interested%20in%20the%20%E2%82%B999%20website%20demo." target="_blank" rel="noopener" aria-label="Chat with AGMIEX on WhatsApp">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>
+    </a>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/918534855501" class="social-float social-float--whatsapp" target="_blank"
-    rel="noopener noreferrer" aria-label="WhatsApp Chat">
-    <div class="social-float__pulse"></div>
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.07.953 11.47.953c-5.44 0-9.866 4.372-9.87 9.802 0 1.698.48 3.35 1.387 4.814L1.99 21.03l5.056-1.306c.01-.005.02-.01.03-.01zM17.11 14c-.28-.14-1.65-.81-1.91-.91-.26-.09-.45-.14-.64.14-.19.28-.73.91-.9 1.1-.16.19-.33.21-.61.07-2.73-1.36-4.47-3-5.22-4.29-.2-.33-.02-.51.15-.68.15-.15.33-.35.49-.53.16-.17.21-.29.31-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49-.16-.01-.35-.01-.54-.01-.19 0-.5.07-.76.35-.26.28-1 1-1 2.44 0 1.44 1.05 2.84 1.2 3.03.14.19 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.71.22 1.35.19 1.86.11.57-.08 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.32-.07-.12-.26-.19-.54-.33z" />
-    </svg>
-  </a>
-
-  <!-- Script links -->
-  <script src="js/main.js"></script>
-  <script src="js/payment-button.js"></script>
-  <script src="js/demo-timer.js"></script>
-  <script>
-    // Form Submission Handler
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("demo-requirements-form");
-      const successBox = document.getElementById("form-success-box");
-
-      if (form && successBox) {
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          form.style.display = "none";
-          successBox.style.display = "block";
-          successBox.scrollIntoView({ behavior: "smooth", block: "center" });
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>

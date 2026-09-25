@@ -1,1089 +1,1166 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en-IN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGMIEX — Premium Software Development & Digital Solutions</title>
-  <meta name="description"
-    content="AGMIEX delivers premium software development, custom web & mobile applications, and digital transformation solutions for growing businesses.">
-  <meta name="keywords"
-    content="software development, web development, mobile apps, custom software, digital solutions, AGMIEX">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://agmiex.com">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AGMIEX — AI, Web &amp; Software Development Company, India</title>
+  <meta name="description" content="AGMIEX is a founder-led IT services studio in Agra, India, building AI solutions and agents, websites, mobile apps, Power BI dashboards and custom software.">
+  <link rel="canonical" href="https://agmiex.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#07090e">
+  <meta name="color-scheme" content="light dark">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / social -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Agmiex — Premium Software Development & Digital Solutions">
-  <meta property="og:description"
-    content="Custom software, web & mobile applications, and digital transformation solutions.">
-  <meta property="og:url" content="https://agmiex.com">
   <meta property="og:site_name" content="AGMIEX">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:url" content="https://agmiex.com/">
+  <meta property="og:title" content="AGMIEX — AI, Web & Software Development Company">
+  <meta property="og:description" content="Founder-led IT services studio building AI solutions and agents, websites, mobile apps, Power BI dashboards and custom software.">
+  <meta property="og:image" content="https://agmiex.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AGMIEX — Software, AI and automation built for how your business works.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AGMIEX — AI, Web & Software Development Company">
+  <meta name="twitter:description" content="Founder-led IT services studio building AI solutions and agents, websites, mobile apps, Power BI dashboards and custom software.">
+  <meta name="twitter:image" content="https://agmiex.com/assets/img/og-image.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Theme before first paint (saved choice → OS preference) -->
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+      d.classList.add('js');
+      window.addEventListener('load', function () {
+        setTimeout(function () { if (!d.classList.contains('js-ready')) d.classList.remove('js'); }, 3000);
+      });
+    })();
+  </script>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- dev:start — unbundled source only: fetch the CSS partials in parallel. `npm run build` removes this block. -->
+  <link rel="preload" href="assets/css/fonts.css" as="style">
+  <link rel="preload" href="assets/css/tokens.css" as="style">
+  <link rel="preload" href="assets/css/base.css" as="style">
+  <link rel="preload" href="assets/css/layout.css" as="style">
+  <link rel="preload" href="assets/css/components.css" as="style">
+  <link rel="preload" href="assets/css/forms.css" as="style">
+  <link rel="preload" href="assets/css/hero.css" as="style">
+  <link rel="preload" href="assets/css/home.css" as="style">
+  <link rel="preload" href="assets/css/sections.css" as="style">
+  <link rel="preload" href="assets/css/contact.css" as="style">
+  <link rel="preload" href="assets/css/pages.css" as="style">
+  <!-- dev:end -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="assets/js/main.js" onerror="document.documentElement.classList.remove('js')"></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "AGMIEX",
-    "url": "https://agmiex.com",
-    "description": "Premium Software Development & Digital Solutions",
-    "areaServed": "Worldwide",
-    "serviceType": ["Web Development", "Mobile Apps", "Custom Software", "Digital Transformation"]
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://agmiex.com/#organization",
+        "name": "AGMIEX",
+        "url": "https://agmiex.com/",
+        "logo": { "@type": "ImageObject", "url": "https://agmiex.com/assets/icons/icon-512.png", "width": 512, "height": 512 },
+        "image": "https://agmiex.com/assets/img/og-image.jpg",
+        "email": "agamsbusiness@gmail.com",
+        "telephone": "+91-85348-55501",
+        "founder": { "@type": "Person", "@id": "https://agmiex.com/#founder", "name": "Agam Singh", "jobTitle": "Founder & CEO" },
+        "sameAs": ["https://instagram.com/agmiex"],
+        "contactPoint": [{ "@type": "ContactPoint", "contactType": "sales", "telephone": "+91-85348-55501", "email": "agamsbusiness@gmail.com", "areaServed": "Worldwide" }]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://agmiex.com/#business",
+        "name": "AGMIEX",
+        "url": "https://agmiex.com/",
+        "image": "https://agmiex.com/assets/img/og-image.jpg",
+        "telephone": "+91-85348-55501",
+        "email": "agamsbusiness@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Devri Rd, Phase 2, Defence Estate",
+          "addressLocality": "Agra",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "282001",
+          "addressCountry": "IN"
+        },
+        "areaServed": "Worldwide",
+        "parentOrganization": { "@id": "https://agmiex.com/#organization" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IT services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI & GenAI Solutions", "description": "Assistants, document search, content generation and data extraction built on large language models." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Agents & Automation", "description": "AI agents that qualify leads, triage support, update CRMs and draft follow-ups with human approval." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development", "description": "Fast, accessible, search-friendly websites, online stores, portals and SaaS web apps." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development", "description": "Cross-platform iOS and Android apps with secure sign-in, payments and notifications." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power BI & Analytics", "description": "Power BI dashboards, data modelling and scheduled refresh from Excel, SQL and API sources." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Software Development", "description": "CRMs, ERPs, booking systems, internal tools and admin panels built around your workflow." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "APIs & Backend Development", "description": "Secure, documented APIs, integrations, payment gateways and cloud deployment." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Automation", "description": "Workflow automation connecting forms, sheets, CRM, email and WhatsApp." } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://agmiex.com/#website",
+        "url": "https://agmiex.com/",
+        "name": "AGMIEX",
+        "inLanguage": "en-IN",
+        "publisher": { "@id": "https://agmiex.com/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://agmiex.com/#webpage",
+        "url": "https://agmiex.com/",
+        "name": "AGMIEX — AI, Web & Software Development Company, India",
+        "inLanguage": "en-IN",
+        "isPartOf": { "@id": "https://agmiex.com/#website" },
+        "about": { "@id": "https://agmiex.com/#organization" },
+        "primaryImageOfPage": "https://agmiex.com/assets/img/og-image.jpg"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://agmiex.com/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "What services does AGMIEX offer?", "acceptedAnswer": { "@type": "Answer", "text": "We design and build AI and GenAI solutions, AI agents and automation, websites and web apps, mobile apps, Power BI dashboards, custom software, and APIs and backends. Many projects combine several of these — for example, a web app with an AI assistant and a reporting dashboard." } },
+          { "@type": "Question", "name": "How much does a project cost?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on scope, features and timelines. After a free consultation we share a clear, itemised quote before any work starts. If you'd like to see our design approach first, you can start with the ₹99 website demo — the fee is adjusted against your project if you go ahead." } },
+          { "@type": "Question", "name": "How long does it take to deliver a project?", "acceptedAnswer": { "@type": "Answer", "text": "Pre-built solutions are typically delivered in 2 to 4 weeks, depending on complexity and customisation. Custom projects vary with scope — we agree on a timeline and milestones with you before development begins." } },
+          { "@type": "Question", "name": "Do I get the complete source code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On project completion and final payment, you receive full ownership of the source code and project assets." } },
+          { "@type": "Question", "name": "What's the difference between a pre-built and a custom project?", "acceptedAnswer": { "@type": "Answer", "text": "Pre-built solutions use our pre-designed structures and code modules for faster deployment. Custom development is engineered from scratch around your specific business logic and workflows." } },
+          { "@type": "Question", "name": "Do you provide maintenance and support after launch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer maintenance plans covering ongoing support, bug fixes, updates and performance reviews, so your product stays secure and up to date." } },
+          { "@type": "Question", "name": "Which technologies do you use?", "acceptedAnswer": { "@type": "Answer", "text": "We primarily use React, Next.js, Node.js, Python, Tailwind CSS, AWS and Google Cloud, along with Power BI for analytics and leading LLM APIs for AI features. We choose the stack that best fits your project." } },
+          { "@type": "Question", "name": "Do you work with clients outside Agra?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We're based in Agra, Uttar Pradesh, and work remotely with clients across India and internationally over video calls, WhatsApp and email." } },
+          { "@type": "Question", "name": "What is the ₹99 website demo?", "acceptedAnswer": { "@type": "Answer", "text": "It's a low-risk way to see how we'd design your website. Share your requirements and we'll create a personalised homepage concept in 24–48 hours. If you go ahead with the full project, the ₹99 is adjusted against your invoice." } }
+        ]
+      }
+    ]
   }
   </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ═══════════════════════════════════════════
-       NAVIGATION
-  ═══════════════════════════════════════════ -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="#" class="navbar__logo" aria-label="AGMIEX Home">
-        <img src="assets/logo/logo.png" alt="AGMIEX Logo" class="navbar__logo-img logo-light">
-        <img src="assets/logo/logo-white.png" alt="AGMIEX Logo" class="navbar__logo-img logo-dark">
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="site-header" data-header data-overlay>
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="AGMIEX — back to top">
+        <img class="brand__logo" src="assets/img/agmiex-logo.png" width="336" height="102" alt="AGMIEX" decoding="async" fetchpriority="high">
       </a>
 
-      <!-- Desktop links -->
-      <nav class="navbar__menu-desktop" aria-label="Main navigation">
-        <a href="#prebuilt" class="navbar__menu-link">Prebuilt</a>
-        <a href="#customized" class="navbar__menu-link">Customized</a>
-        <a href="#team" class="navbar__menu-link">About Us</a>
-        <a href="#contact" class="navbar__menu-link">Contact Us</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" role="list">
+          <li><a class="site-nav__link" href="#services">Services</a></li>
+          <li><a class="site-nav__link" href="#solutions">Solutions</a></li>
+          <li><a class="site-nav__link" href="#process">Process</a></li>
+          <li><a class="site-nav__link" href="#work">Work</a></li>
+          <li><a class="site-nav__link" href="#about">About</a></li>
+          <li><a class="site-nav__link" href="#faq">FAQ</a></li>
+          <li><a class="site-nav__link" href="#contact">Contact</a></li>
+        </ul>
       </nav>
 
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <!-- Theme Toggle Button -->
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
-          <svg class="moon-icon" viewBox="0 0 24 24">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-          </svg>
-          <svg class="sun-icon" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="5" fill="currentColor" stroke="none" />
-            <line x1="12" y1="1" x2="12" y2="3" />
-            <line x1="12" y1="21" x2="12" y2="23" />
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-            <line x1="1" y1="12" x2="3" y2="12" />
-            <line x1="21" y1="12" x2="23" y2="12" />
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-          </svg>
+      <div class="site-header__actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dark theme">
+          <svg class="icon theme-toggle__moon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-moon"></use></svg>
+          <svg class="icon theme-toggle__sun" aria-hidden="true"><use href="assets/icons/sprite.svg#i-sun"></use></svg>
         </button>
-
-        <!-- Hamburger toggle -->
-        <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
+        <a class="btn btn--primary btn--sm site-header__cta" href="#contact">Start a project</a>
+        <button class="icon-btn menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile menu modal -->
-    <nav class="navbar__menu-mobile" id="menu-mobile" aria-label="Mobile navigation">
-      <a href="#prebuilt" class="navbar__menu-link">Prebuilt</a>
-      <a href="#customized" class="navbar__menu-link">Customized</a>
-      <a href="#team" class="navbar__menu-link">About Us</a>
-      <a href="#contact" class="navbar__menu-link">Contact Us</a>
-    </nav>
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+      <nav aria-label="Mobile">
+        <ul class="mobile-menu__list" role="list">
+          <li><a href="#services"><span>01</span>Services</a></li>
+          <li><a href="#solutions"><span>02</span>Solutions</a></li>
+          <li><a href="#process"><span>03</span>Process</a></li>
+          <li><a href="#work"><span>04</span>Work</a></li>
+          <li><a href="#about"><span>05</span>About</a></li>
+          <li><a href="#faq"><span>06</span>FAQ</a></li>
+          <li><a href="book-demo.html"><span>07</span>₹99 website demo</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu__footer">
+        <a class="btn btn--primary btn--lg btn--block" href="#contact">Start a project</a>
+        <a class="btn btn--ghost btn--lg btn--block btn--wa" href="https://wa.me/918534855501" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>
+          WhatsApp us
+        </a>
+        <p class="mobile-menu__contact">or email <a href="mailto:agamsbusiness@gmail.com">agamsbusiness@gmail.com</a></p>
+      </div>
+    </div>
   </header>
 
+  <main id="main">
 
-  <main>
-
-    <!-- ═══════════════════════════════════════════
-         1. HERO SECTION
-    ═══════════════════════════════════════════ -->
-    <section class="hero" id="hero">
-      <!-- Animated background orbs -->
-      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
-      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
-      <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
-
-      <div class="container">
-        <div class="hero__content">
-
-          <!-- Profile image with floating gradient glow -->
-          <div class="hero__visual hero-anim hero-anim--1">
-            <div class="hero__glow" aria-hidden="true"></div>
-            <img src="assets/logo/agamsingh.png" alt="Agam Singh — Founder of AGMIEX" class="hero__img">
-          </div>
-
-          <!-- Value proposition heading -->
-          <h1 class="hero__main-title hero-anim hero-anim--2">
-            We Build Software<br>That <span class="hero__gradient-text">Grows Your Revenue</span>
-          </h1>
-
-          <!-- Compelling subheading -->
-          <p class="hero__subtitle hero-anim hero-anim--3">
-            AGMIEX is a premium software studio that designs, develops &amp; ships
-            full-stack web apps, mobile apps, AI dashboards &amp; custom software — on time, with source code you own.
-          </p>
-
-          <!-- Premium CTA buttons -->
-          <div class="hero__ctas hero-anim hero-anim--4">
-            <a href="#contact" class="btn btn--primary btn--hero-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Book Free Consultation
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero on-dark" id="top" aria-labelledby="hero-title">
+      <div class="hero__backdrop" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow hero__rise"><span class="status-dot" aria-hidden="true"></span>IT services · AI · Software — Agra, India</p>
+          <h1 class="display hero__rise" id="hero-title" style="--d: 80ms">We build the software, AI and automation <span class="soft">your business runs on.</span></h1>
+          <p class="lead hero__rise" style="--d: 160ms">AGMIEX is a founder-led IT services studio. We design, build and support AI solutions, web and mobile apps, Power BI dashboards and custom software — and you own every line of code.</p>
+          <div class="hero__actions hero__rise" style="--d: 240ms">
+            <a class="btn btn--primary btn--lg" href="#contact">
+              Start a project
+              <svg class="icon icon--nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>
             </a>
-            <a href="#prebuilt" class="btn btn--secondary btn--hero-secondary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View Portfolio
+            <a class="btn btn--ghost btn--lg" href="book-demo.html">Book a ₹99 website demo</a>
+          </div>
+          <ul class="assurances hero__rise" role="list" style="--d: 320ms">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Free consultation</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Full code ownership</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Direct founder access</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Secure payments</li>
+          </ul>
+        </div>
+
+        <!-- Illustrative product visual: an AI agent automating a lead follow-up -->
+        <div class="hero__visual hero__rise" style="--d: 200ms" aria-hidden="true">
+          <div class="viz-chart">
+            <p class="viz-chart__label">Weekly enquiries</p>
+            <div class="viz-bars">
+              <i style="--h: 38%; --n: 0"></i><i style="--h: 52%; --n: 1"></i><i style="--h: 44%; --n: 2"></i><i style="--h: 63%; --n: 3"></i><i style="--h: 58%; --n: 4"></i><i style="--h: 76%; --n: 5"></i><i style="--h: 92%; --n: 6"></i>
+            </div>
+            <p class="viz-chart__foot">POWER BI · AUTO-REFRESH</p>
+          </div>
+          <div class="viz-window">
+            <div class="viz-window__bar">
+              <span class="viz-dots"><i></i><i></i><i></i></span>
+              <span class="viz-window__title">lead-followup.agent</span>
+              <span class="viz-live"><span></span>Running</span>
+            </div>
+            <ol class="viz-steps">
+              <li class="viz-step" style="--i: 0">
+                <span class="viz-step__icon"><svg class="icon"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+                <div><p class="viz-step__title">New enquiry received</p><p class="viz-step__meta">Website form · just now</p></div>
+                <span class="viz-step__tag">trigger</span>
+              </li>
+              <li class="viz-step" style="--i: 1">
+                <span class="viz-step__icon"><svg class="icon"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+                <div><p class="viz-step__title">Intent classified</p><p class="viz-step__meta">“Booking app for our clinic”</p></div>
+                <span class="viz-step__tag">AI</span>
+              </li>
+              <li class="viz-step" style="--i: 2">
+                <span class="viz-step__icon"><svg class="icon"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+                <div><p class="viz-step__title">CRM record created</p><p class="viz-step__meta">Contact, company &amp; deal</p></div>
+                <span class="viz-step__tag">tool</span>
+              </li>
+              <li class="viz-step is-pending" style="--i: 3">
+                <span class="viz-step__icon"></span>
+                <div>
+                  <p class="viz-step__title">Follow-up drafted</p>
+                  <p class="viz-step__meta">WhatsApp · waiting for your approval</p>
+                  <div class="viz-approve"><span>Approve</span><span>Edit</span></div>
+                </div>
+                <span class="viz-step__tag">human</span>
+              </li>
+            </ol>
+          </div>
+          <div class="viz-code">
+<pre><span class="t-k">const</span> agent = <span class="t-f">createAgent</span>({
+  trigger: <span class="t-s">"new_enquiry"</span>,
+  tools: [crm, whatsapp, calendar],
+  approval: <span class="t-s">"human"</span>, <span class="t-c">// you stay in control</span>
+});</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="hero__capabilities" role="list" aria-label="Services">
+          <li><a href="#ai-genai">AI &amp; GenAI</a></li>
+          <li><a href="#ai-agents">AI Agents</a></li>
+          <li><a href="#web-development">Web</a></li>
+          <li><a href="#mobile-apps">Mobile</a></li>
+          <li><a href="#power-bi">Power BI</a></li>
+          <li><a href="#custom-software">Custom Software</a></li>
+          <li><a href="#apis-backend">APIs &amp; Backend</a></li>
+          <li><a href="#business-automation">Automation</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVICES ═══════════ -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head section-head--split" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow__index">01</span>Services</p>
+            <h2 class="section-title" id="services-title">Everything you need to design, build and run digital products.</h2>
+          </div>
+          <p class="lead">From a single website to AI agents wired into your operations — one accountable team, from the first conversation to long after launch.</p>
+        </header>
+
+        <div class="services-grid" data-reveal-group>
+          <article class="card service-card service-card--feature" id="ai-genai" data-reveal>
+            <div class="service-card__top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-sparkles"></use></svg></span>
+              <span class="service-card__num">01</span>
+            </div>
+            <h3>AI &amp; GenAI Solutions</h3>
+            <p>Put large language models to work on your own data — assistants, document search, content generation and data extraction — with guardrails and cost controls built in.</p>
+            <div class="service-viz" aria-hidden="true">
+              <p class="bubble bubble--user">Summarise this week’s customer complaints.</p>
+              <div class="bubble bubble--ai">
+                <span class="bubble__label"><svg class="icon"><use href="assets/icons/sprite.svg#i-sparkles"></use></svg>Assistant</span>
+                Three recurring themes: late deliveries, sizing questions and refund status. Draft replies are ready for your review.
+                <span class="bubble__cite">Sources: support inbox · order notes</span>
+              </div>
+            </div>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Chat assistants that answer from your documents</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Document Q&amp;A, summaries and data extraction</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>AI features inside the apps you already use</li>
+            </ul>
+            <p class="service-card__stack">LLM APIs · RAG · Vector search · Python</p>
+          </article>
+
+          <article class="card service-card service-card--feature" id="ai-agents" data-reveal>
+            <div class="service-card__top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-bot"></use></svg></span>
+              <span class="service-card__num">02</span>
+            </div>
+            <h3>AI Agents &amp; Automation</h3>
+            <p>Agents that take action, not just answer questions: qualifying leads, triaging support, updating your CRM and drafting follow-ups — with human approval where it matters.</p>
+            <div class="service-viz flow" aria-hidden="true">
+              <span class="flow-node">Trigger<small>New lead</small></span>
+              <span class="flow-node flow-node--agent">Agent<small>Qualify &amp; plan</small></span>
+              <span class="flow-node">Tools<small>CRM · WhatsApp</small></span>
+              <span class="flow-node flow-node--human">You<small>Approve</small></span>
+            </div>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Lead qualification and follow-up agents</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Support triage and reply drafting</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Human-in-the-loop approvals and activity logs</li>
+            </ul>
+            <p class="service-card__stack">Tool calling · Webhooks · Workflow orchestration</p>
+          </article>
+
+          <article class="card service-card" id="web-development" data-reveal>
+            <div class="service-card__top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-browser"></use></svg></span>
+              <span class="service-card__num">03</span>
+            </div>
+            <h3>Web Development</h3>
+            <p>Fast, accessible, search-friendly websites and web apps — from business sites and online stores to customer portals and SaaS products.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Business websites and landing pages</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>E-commerce storefronts</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Web apps, portals and SaaS</li>
+            </ul>
+            <p class="service-card__stack">React · Next.js · Tailwind CSS</p>
+          </article>
+
+          <article class="card service-card" id="mobile-apps" data-reveal>
+            <div class="service-card__top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-smartphone"></use></svg></span>
+              <span class="service-card__num">04</span>
+            </div>
+            <h3>Mobile Apps</h3>
+            <p>Cross-platform iOS and Android apps with clean UX, secure sign-in, payments and push notifications — built and released to the app stores.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>iOS and Android from one codebase</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Payments, sign-in and notifications</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>App Store and Play Store release</li>
+            </ul>
+            <p class="service-card__stack">React Native · Progressive Web Apps</p>
+          </article>
+
+          <article class="card service-card" id="power-bi" data-reveal>
+            <div class="service-card__top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-chart"></use></svg></span>
+              <span class="service-card__num">05</span>
+            </div>
+            <h3>Power BI &amp; Analytics</h3>
+            <p>Turn spreadsheets and databases into Power BI dashboards your team actually uses, with clean data models and scheduled refresh.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>KPI and management dashboards</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Data modelling and DAX</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Excel, SQL and API data sources</li>
+            </ul>
+            <p class="service-card__stack">Power BI · DAX · SQL</p>
+          </article>
+
+          <article class="card service-card" id="custom-software" data-reveal>
+            <div class="service-card__top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-layers"></use></svg></span>
+              <span class="service-card__num">06</span>
+            </div>
+            <h3>Custom Software</h3>
+            <p>Software shaped around the way you work — CRMs, ERPs, booking systems, internal tools and admin panels that replace spreadsheets and manual steps.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>CRMs, ERPs and client portals</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Internal tools and admin panels</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Role-based access and audit trails</li>
+            </ul>
+            <p class="service-card__stack">Node.js · Python · PostgreSQL</p>
+          </article>
+
+          <article class="card service-card" id="apis-backend" data-reveal>
+            <div class="service-card__top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-server"></use></svg></span>
+              <span class="service-card__num">07</span>
+            </div>
+            <h3>APIs &amp; Backend</h3>
+            <p>Secure, documented APIs and backends that connect your apps, data and third-party services — deployed on reliable cloud infrastructure.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>REST APIs and webhooks</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Auth, roles and payment gateways</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Cloud deployment on AWS or Google Cloud</li>
+            </ul>
+            <p class="service-card__stack">Node.js · Supabase · AWS · GCP</p>
+          </article>
+
+          <article class="card service-card" id="business-automation" data-reveal>
+            <div class="service-card__top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-zap"></use></svg></span>
+              <span class="service-card__num">08</span>
+            </div>
+            <h3>Business Automation</h3>
+            <p>Remove repetitive work. We connect your forms, sheets, CRM, email and WhatsApp so data moves on its own and nothing slips through the cracks.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Workflow automation across your tools</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>WhatsApp and email notifications</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Automated reports, invoices and documents</li>
+            </ul>
+            <p class="service-card__stack">Integrations · Scheduled jobs · APIs</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SOLUTIONS ═══════════ -->
+    <section class="section section--subtle" id="solutions" aria-labelledby="solutions-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__index">02</span>Solutions</p>
+          <h2 class="section-title" id="solutions-title">Flexible ways to work with us.</h2>
+          <p class="lead">Build something entirely new, launch fast on proven foundations, or keep a live product in great shape — pick the model that fits your stage and budget.</p>
+        </header>
+
+        <div class="models-grid" data-reveal-group>
+          <article class="card model-card" data-reveal>
+            <p class="model-card__label">01 · Built from scratch</p>
+            <h3>Custom development</h3>
+            <p>Software engineered around your business logic, users and workflows — for products that need to be exactly right.</p>
+            <p class="model-card__best"><strong>Best for:</strong> SaaS products, internal platforms and unique workflows.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Discovery and scoping</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>UX/UI design and technical architecture</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Iterative builds with regular demos</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Full source-code handover</li>
+            </ul>
+            <a class="text-link" href="#contact">Discuss a custom build <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
+          </article>
+
+          <article class="card model-card" data-reveal>
+            <p class="model-card__label">02 · Launch faster</p>
+            <h3>Pre-built, customised</h3>
+            <p>We start from our pre-designed structures and code modules, then tailor them to your brand and workflow for a faster, more affordable launch.</p>
+            <p class="model-card__best"><strong>Best for:</strong> getting to market quickly on a focused budget.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Typically delivered in 2–4 weeks</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Branding and feature customisation</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Full source code included</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Room to grow into a custom build</li>
+            </ul>
+            <a class="text-link" href="#contact">Ask about pre-built options <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
+          </article>
+
+          <article class="card model-card" data-reveal>
+            <p class="model-card__label">03 · Stay ahead</p>
+            <h3>Maintenance &amp; support</h3>
+            <p>Keep your website, app or software fast, secure and up to date after launch, with a plan sized to your product.</p>
+            <p class="model-card__best"><strong>Best for:</strong> live products that need reliable, ongoing care.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Bug fixes and updates</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Performance and security reviews</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Small improvements and new features</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Multiple plan tiers to choose from</li>
+            </ul>
+            <a class="text-link" href="#contact">Ask about support plans <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
+          </article>
+        </div>
+
+        <div class="offer on-dark" data-reveal>
+          <div>
+            <p class="eyebrow">Try before you commit</p>
+            <h3 class="offer__title" id="offer-title">See your new homepage for <span class="offer__price">₹99</span>.</h3>
+            <p class="offer__text">Share a few details about your business and we’ll design a personalised homepage concept in 24–48 hours. If you go ahead with the full project, the ₹99 is adjusted against your invoice.</p>
+            <ul class="assurances" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>24–48 hour delivery</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Adjusted against your project</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>No further obligation</li>
+            </ul>
+          </div>
+          <div class="offer__actions">
+            <a class="btn btn--light btn--lg" href="book-demo.html">
+              Book your ₹99 demo
+              <svg class="icon icon--nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>
+            </a>
+            <p class="offer__note"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-lock"></use></svg>Secure payment via Razorpay</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PROCESS ═══════════ -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section-head section-head--split" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow__index">03</span>Process</p>
+            <h2 class="section-title" id="process-title">A clear path from idea to launch.</h2>
+          </div>
+          <p class="lead">No black boxes. You always know what’s being built, what it costs and what comes next.</p>
+        </header>
+
+        <ol class="process" data-reveal-group>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 01</span>
+            <h3>Discover</h3>
+            <p>A free consultation to understand your goals, users and constraints. Together we agree on scope and priorities.</p>
+            <p class="process-step__out"><span>You get</span>A clear scope</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 02</span>
+            <h3>Design</h3>
+            <p>Wireframes, UI design and technical architecture — with a transparent quote and timeline before any build begins.</p>
+            <p class="process-step__out"><span>You get</span>Designs, quote &amp; timeline</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 03</span>
+            <h3>Build</h3>
+            <p>Development in short iterations with regular demos, so you see progress early and shape the product as it grows.</p>
+            <p class="process-step__out"><span>You get</span>Working software, demoed often</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 04</span>
+            <h3>Launch</h3>
+            <p>Testing, deployment and a clean handover — including the complete source code and project assets.</p>
+            <p class="process-step__out"><span>You get</span>A live product you own</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__num">Step 05</span>
+            <h3>Support</h3>
+            <p>Maintenance, fixes and improvements after launch, on a plan that matches how your product is used.</p>
+            <p class="process-step__out"><span>You get</span>Ongoing peace of mind</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════ TECHNOLOGIES ═══════════ -->
+    <!-- REVIEW: confirm this list matches the tools AGMIEX actively uses. -->
+    <section class="section section--subtle" id="technologies" aria-labelledby="tech-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__index">04</span>Technologies</p>
+          <h2 class="section-title" id="tech-title">A modern, proven stack — chosen for your project.</h2>
+          <p class="lead">We pick tools for reliability, performance and long-term maintainability, so the software you own is easy to extend and hand over.</p>
+        </header>
+
+        <div class="tech-grid" data-reveal-group>
+          <div class="card tech-group" data-reveal>
+            <h3><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-browser"></use></svg>Frontend</h3>
+            <ul class="chip-list" role="list">
+              <li class="chip">React</li><li class="chip">Next.js</li><li class="chip">TypeScript</li><li class="chip">JavaScript</li><li class="chip">Tailwind CSS</li><li class="chip">HTML &amp; CSS</li>
+            </ul>
+          </div>
+          <div class="card tech-group" data-reveal>
+            <h3><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-smartphone"></use></svg>Mobile</h3>
+            <ul class="chip-list" role="list">
+              <li class="chip">React Native</li><li class="chip">Progressive Web Apps</li><li class="chip">Push notifications</li><li class="chip">In-app payments</li>
+            </ul>
+          </div>
+          <div class="card tech-group" data-reveal>
+            <h3><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-server"></use></svg>Backend &amp; APIs</h3>
+            <ul class="chip-list" role="list">
+              <li class="chip">Node.js</li><li class="chip">Python</li><li class="chip">REST APIs</li><li class="chip">Webhooks</li><li class="chip">PostgreSQL</li><li class="chip">Supabase</li>
+            </ul>
+          </div>
+          <div class="card tech-group" data-reveal>
+            <h3><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-sparkles"></use></svg>AI &amp; data</h3>
+            <ul class="chip-list" role="list">
+              <li class="chip">LLM APIs</li><li class="chip">RAG &amp; vector search</li><li class="chip">Power BI</li><li class="chip">DAX</li><li class="chip">SQL</li>
+            </ul>
+          </div>
+          <div class="card tech-group" data-reveal>
+            <h3><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-cloud"></use></svg>Cloud &amp; DevOps</h3>
+            <ul class="chip-list" role="list">
+              <li class="chip">AWS</li><li class="chip">Google Cloud</li><li class="chip">Git</li><li class="chip">CI/CD</li>
+            </ul>
+          </div>
+          <div class="card tech-group" data-reveal>
+            <h3><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-plug"></use></svg>Integrations</h3>
+            <ul class="chip-list" role="list">
+              <li class="chip">Razorpay</li><li class="chip">WhatsApp</li><li class="chip">Google Workspace</li><li class="chip">CRMs</li><li class="chip">Email</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ WORK / CASE STUDIES ═══════════
+         PLACEHOLDER: no verified AGMIEX case studies exist in the codebase yet.
+         Replace each card with a real project (client name only with permission,
+         the challenge, what was built, verified results and a real screenshot). -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head section-head--split" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow__index">05</span>Work</p>
+            <h2 class="section-title" id="work-title">Case studies</h2>
+          </div>
+          <p class="lead">We’re preparing detailed write-ups of recent projects, published only with each client’s permission. Until then, we’re happy to walk you through relevant examples on a call.</p>
+        </header>
+
+        <div class="work-grid" data-reveal-group>
+          <article class="card case-card" data-placeholder="case-study" data-reveal>
+            <div class="case-card__cover" aria-hidden="true">
+              <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="cv-web" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#11244f"/><stop offset="1" stop-color="#0a0f1c"/></linearGradient>
+                </defs>
+                <rect width="400" height="250" fill="url(#cv-web)"/>
+                <g transform="translate(46 36)">
+                  <rect width="308" height="214" rx="10" fill="#0f1524" stroke="#ffffff" stroke-opacity=".12"/>
+                  <circle cx="14" cy="12" r="3" fill="#fff" fill-opacity=".2"/><circle cx="25" cy="12" r="3" fill="#fff" fill-opacity=".2"/><circle cx="36" cy="12" r="3" fill="#fff" fill-opacity=".2"/>
+                  <rect y="24" width="308" height="1" fill="#fff" fill-opacity=".08"/>
+                  <rect x="18" y="42" width="128" height="10" rx="3" fill="#e6ebf5" fill-opacity=".9"/>
+                  <rect x="18" y="58" width="96" height="10" rx="3" fill="#e6ebf5" fill-opacity=".45"/>
+                  <rect x="18" y="80" width="58" height="18" rx="5" fill="#2563eb"/>
+                  <rect x="166" y="38" width="124" height="66" rx="7" fill="#2563eb" fill-opacity=".28"/>
+                  <circle cx="228" cy="71" r="16" fill="#7aa7ff" fill-opacity=".5"/>
+                  <g fill="#fff" fill-opacity=".06">
+                    <rect x="18" y="120" width="62" height="78" rx="6"/><rect x="90" y="120" width="62" height="78" rx="6"/><rect x="162" y="120" width="62" height="78" rx="6"/><rect x="234" y="120" width="56" height="78" rx="6"/>
+                  </g>
+                  <g fill="#7aa7ff" fill-opacity=".35">
+                    <rect x="24" y="126" width="50" height="40" rx="4"/><rect x="96" y="126" width="50" height="40" rx="4"/><rect x="168" y="126" width="50" height="40" rx="4"/><rect x="240" y="126" width="44" height="40" rx="4"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="case-card__body">
+              <div class="case-card__meta"><span class="chip">Web &amp; e-commerce</span><span class="placeholder-tag">Coming soon</span></div>
+              <h3>Case study coming soon</h3>
+              <p>A recent website or online store — the brief, what we built and the results, once the client approves publication.</p>
+            </div>
+          </article>
+
+          <article class="card case-card" data-placeholder="case-study" data-reveal>
+            <div class="case-card__cover" aria-hidden="true">
+              <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="cv-ai" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1a4a"/><stop offset="1" stop-color="#0a0f1c"/></linearGradient>
+                </defs>
+                <rect width="400" height="250" fill="url(#cv-ai)"/>
+                <g stroke="#7aa7ff" stroke-opacity=".45" stroke-width="1.5" fill="none">
+                  <path d="M92 125 H168"/><path d="M232 125 C262 125 262 78 300 78"/><path d="M232 125 H300"/><path d="M232 125 C262 125 262 172 300 172"/>
+                </g>
+                <rect x="40" y="103" width="52" height="44" rx="10" fill="#fff" fill-opacity=".08" stroke="#fff" stroke-opacity=".15"/>
+                <rect x="52" y="116" width="28" height="5" rx="2.5" fill="#fff" fill-opacity=".6"/><rect x="52" y="127" width="18" height="5" rx="2.5" fill="#fff" fill-opacity=".3"/>
+                <circle cx="200" cy="125" r="32" fill="#2563eb" fill-opacity=".25" stroke="#7aa7ff" stroke-opacity=".7"/>
+                <path d="M200 107 204.6 120.4 218 125 204.6 129.6 200 143 195.4 129.6 182 125 195.4 120.4Z" fill="#c9dbff"/>
+                <g fill="#fff" fill-opacity=".08" stroke="#fff" stroke-opacity=".15">
+                  <rect x="300" y="60" width="64" height="36" rx="9"/><rect x="300" y="107" width="64" height="36" rx="9"/><rect x="300" y="154" width="64" height="36" rx="9"/>
+                </g>
+                <g fill="#fff" fill-opacity=".45">
+                  <rect x="312" y="74" width="36" height="6" rx="3"/><rect x="312" y="121" width="30" height="6" rx="3"/><rect x="312" y="168" width="40" height="6" rx="3"/>
+                </g>
+                <circle cx="356" cy="172" r="4" fill="#4ade80"/>
+              </svg>
+            </div>
+            <div class="case-card__body">
+              <div class="case-card__meta"><span class="chip">AI &amp; automation</span><span class="placeholder-tag">Coming soon</span></div>
+              <h3>Case study coming soon</h3>
+              <p>An AI assistant or automation project — the workflow we changed and the time it saved, shared with the client’s permission.</p>
+            </div>
+          </article>
+
+          <article class="card case-card" data-placeholder="case-study" data-reveal>
+            <div class="case-card__cover" aria-hidden="true">
+              <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="cv-data" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e2a3a"/><stop offset="1" stop-color="#0a0f1c"/></linearGradient>
+                </defs>
+                <rect width="400" height="250" fill="url(#cv-data)"/>
+                <g transform="translate(40 34)">
+                  <g fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".12">
+                    <rect width="100" height="52" rx="8"/><rect x="110" width="100" height="52" rx="8"/><rect x="220" width="100" height="52" rx="8"/>
+                    <rect y="64" width="198" height="120" rx="8"/><rect x="210" y="64" width="110" height="120" rx="8"/>
+                  </g>
+                  <g fill="#e6ebf5" fill-opacity=".75"><rect x="12" y="14" width="40" height="6" rx="3"/><rect x="122" y="14" width="46" height="6" rx="3"/><rect x="232" y="14" width="34" height="6" rx="3"/></g>
+                  <g fill="#7aa7ff"><rect x="12" y="28" width="56" height="10" rx="3"/><rect x="122" y="28" width="48" height="10" rx="3"/><rect x="232" y="28" width="62" height="10" rx="3"/></g>
+                  <g fill="#2563eb" fill-opacity=".8">
+                    <rect x="20" y="138" width="16" height="34" rx="3"/><rect x="46" y="120" width="16" height="52" rx="3"/><rect x="72" y="128" width="16" height="44" rx="3"/><rect x="98" y="104" width="16" height="68" rx="3"/><rect x="124" y="112" width="16" height="60" rx="3"/><rect x="150" y="88" width="16" height="84" rx="3"/>
+                  </g>
+                  <path d="M224 160 C244 150 252 128 268 132 S292 104 306 92" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="306" cy="92" r="4" fill="#4ade80"/>
+                </g>
+              </svg>
+            </div>
+            <div class="case-card__body">
+              <div class="case-card__meta"><span class="chip">Data &amp; Power BI</span><span class="placeholder-tag">Coming soon</span></div>
+              <h3>Case study coming soon</h3>
+              <p>A reporting or dashboard project — the decisions it now supports and how the data comes together, with the client’s permission.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="work-cta" data-reveal>
+          <p><strong>Want to see work relevant to your industry?</strong> Ask us — we’ll share suitable examples privately.</p>
+          <a class="btn btn--ghost btn--wa" href="https://wa.me/918534855501?text=Hi%20AGMIEX%2C%20could%20you%20share%20some%20examples%20of%20your%20work%3F" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>
+            Ask for examples
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section class="section section--subtle" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <figure class="founder" data-reveal>
+          <div class="founder__frame">
+            <picture>
+              <source type="image/webp" srcset="assets/img/agam-singh-400.webp 400w, assets/img/agam-singh-640.webp 640w" sizes="(min-width: 1024px) 460px, (min-width: 640px) 460px, 90vw">
+              <img src="assets/img/agam-singh-640.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Portrait of Agam Singh, Founder and CEO of AGMIEX, in a navy suit and turban">
+            </picture>
+          </div>
+          <figcaption class="founder__caption">
+            <span><strong>Agam Singh</strong><span>Founder &amp; CEO, AGMIEX</span></span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check-circle"></use></svg>
+          </figcaption>
+        </figure>
+
+        <div class="about-copy" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__index">06</span>About</p>
+          <h2 class="section-title" id="about-title" style="margin-top: 1rem">A founder-led studio that stays accountable.</h2>
+          <p>AGMIEX is an IT services studio based in Agra, Uttar Pradesh, led by founder Agam Singh. We work with businesses that need dependable software — not just a website — and we stay involved from the first conversation through launch and beyond.</p>
+          <p>Every engagement is shaped around three principles: build for performance and security from day one, communicate clearly, and hand over everything you need to own your product.</p>
+
+          <blockquote class="founder-quote">
+            <p>“We don’t just write code — we architect digital products that drive measurable revenue. Every solution we ship is built for performance, security, and long-term scalability.”</p>
+            <footer>— Agam Singh, Founder &amp; CEO</footer>
+          </blockquote>
+
+          <dl class="about-facts">
+            <div><dt>Based in</dt><dd>Agra, Uttar Pradesh</dd></div>
+            <div><dt>Clients</dt><dd>Across India &amp; abroad</dd></div>
+            <div><dt>Your contact</dt><dd>The founder, directly</dd></div>
+          </dl>
+
+          <div class="about-links">
+            <a class="btn btn--primary" href="#contact">Talk to Agam <svg class="icon icon--nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
+            <a class="btn btn--ghost" href="https://instagram.com/agmiex" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-instagram"></use></svg>
+              @agmiex
             </a>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Trust badges -->
-          <div class="hero__trust-badges hero-anim hero-anim--5">
-            <div class="hero__trust-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Source Code Included</span>
-            </div>
-            <div class="hero__trust-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Free Consultation</span>
-            </div>
-            <div class="hero__trust-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Fast Delivery</span>
-            </div>
-            <div class="hero__trust-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Secure Payments</span>
-            </div>
+    <!-- ═══════════ WHY AGMIEX ═══════════ -->
+    <section class="section" id="why-agmiex" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head section-head--center" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__index">07</span>Why AGMIEX</p>
+          <h2 class="section-title" id="why-title">What you can expect when you work with us.</h2>
+        </header>
+
+        <div class="why-grid" data-reveal-group>
+          <div class="why-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user"></use></svg></span>
+            <h3>Direct founder access</h3>
+            <p>You work with Agam directly, from the first call to launch — decisions are quick and nothing gets lost in hand-offs.</p>
           </div>
-
-          <!-- Trusted by -->
-          <div class="hero__trusted hero-anim hero-anim--6">
-            <div class="hero__trusted-avatars">
-              <span class="avatar-dot"></span>
-              <span class="avatar-dot"></span>
-              <span class="avatar-dot"></span>
-            </div>
-            <p>Trusted by <span>1.3L+</span> Audience</p>
+          <div class="why-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-code"></use></svg></span>
+            <h3>You own the code</h3>
+            <p>The complete source code and project assets are yours on final payment. No lock-in, no hostage situations.</p>
           </div>
-
-          <!-- Partner logos -->
-          <div class="hero__partners hero-anim hero-anim--7">
-            <span class="partner-logo">Daily Objects</span>
-            <span class="partner-logo">MURZBAN</span>
-            <span class="partner-logo">ceya</span>
-            <span class="partner-logo">EET9</span>
-            <span class="partner-logo">TWINLEAVES</span>
-            <span class="partner-logo">Plutoze</span>
-            <span class="partner-logo">Momentz</span>
+          <div class="why-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-eye"></use></svg></span>
+            <h3>See it before you commit</h3>
+            <p>Start with a free consultation — or a ₹99 homepage demo — before you invest in the full build.</p>
+          </div>
+          <div class="why-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-gauge"></use></svg></span>
+            <h3>Built for performance</h3>
+            <p>Fast, accessible, search-friendly builds, engineered to scale as your business and traffic grow.</p>
+          </div>
+          <div class="why-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-shield"></use></svg></span>
+            <h3>Security by default</h3>
+            <p>Access controls, validated inputs and secure payment integrations are part of the build, not an afterthought.</p>
+          </div>
+          <div class="why-item" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-lifebuoy"></use></svg></span>
+            <h3>Support after launch</h3>
+            <p>Maintenance plans for fixes, updates and improvements, so your product keeps getting better once it’s live.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══════════ TESTIMONIALS ═══════════
+         PLACEHOLDER: no verified AGMIEX testimonials exist in the codebase yet.
+         Add only real reviews, with the client's written permission. -->
+    <section class="section section--subtle" id="testimonials" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head section-head--center" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__index">08</span>Testimonials</p>
+          <h2 class="section-title" id="reviews-title">Client reviews</h2>
+        </header>
 
-    <!-- ═══════════════════════════════════════════
-         2. DOUBLE STRIP MARQUEES
-    ═══════════════════════════════════════════ -->
-    <div class="marquee-band">
-      <div class="marquee-band__track">
-        <span class="marquee-band__item">Develop it from Best</span>
-        <span class="marquee-band__item">Develop it On Time</span>
-        <span class="marquee-band__item">Design that Converts</span>
-        <span class="marquee-band__item">Scale with Confidence</span>
-        <span class="marquee-band__item">Develop it from Best</span>
-        <span class="marquee-band__item">Develop it On Time</span>
-        <span class="marquee-band__item">Design that Converts</span>
-        <span class="marquee-band__item">Scale with Confidence</span>
-      </div>
-    </div>
-    <div class="marquee-band marquee-band--reverse"
-      style="background: var(--bg-alt); color: var(--text-color); border-bottom: 1px solid var(--border-color);">
-      <div class="marquee-band__track">
-        <span class="marquee-band__item">Autonomous AI Agents</span>
-        <span class="marquee-band__item">Cloud & DevOps Architectures</span>
-        <span class="marquee-band__item">Power BI & Operations Analytics</span>
-        <span class="marquee-band__item">Autonomous AI Agents</span>
-        <span class="marquee-band__item">Cloud & DevOps Architectures</span>
-        <span class="marquee-band__item">Power BI & Operations Analytics</span>
-      </div>
-    </div>
-
-
-    <!-- ═══════════════════════════════════════════
-         2.5. DEMO OFFER SECTION (₹99 TRIAL)
-    ═══════════════════════════════════════════ -->
-    <section class="demo-banner-section" id="book-demo-offer">
-      <div class="demo-banner-container">
-        <div class="demo-banner-card reveal">
-          <!-- Background Aura -->
-          <div class="demo-banner-glow"></div>
-
-          <!-- Badge & Headings -->
-          <div class="demo-banner-header">
-            <span class="demo-banner-badge">
-              <span class="demo-banner-badge-dot"></span>
-              Special Trial Sprint — Try Before You Build
-            </span>
-            <h2 class="demo-banner-heading">
-              Book Your Personalized Website Demo for Just <span>₹99</span>
-            </h2>
-            <p class="demo-banner-subheading">
-              See a custom homepage design for your business before investing in a full project. The ₹99 will be adjusted if you proceed.
-            </p>
-
-            <!-- URGENCY & SCARCITY BAR (ONLY 1 LEFT, ₹10,000 CUT PRICE, 30S TIMER) -->
-            <div class="demo-urgency-wrapper">
-              <div class="scarcity-badge-pulse">
-                <span class="scarcity-dot"></span>
-                🔥 Only 1 Slot Left Today!
-              </div>
-
-              <div class="price-strikethrough-box">
-                <span class="price-old">₹10,000</span>
-                <span class="price-new-heavy">₹99</span>
-                <span class="discount-pill-tag">Heavy 99% Discount</span>
-              </div>
-
-              <div class="timer-box-30s">
-                <span>⏱️ Offer Expires In:</span>
-                <span class="timer-digits-30s demo-30s-timer">00:30</span>
-              </div>
-            </div>
+        <div class="reviews-empty" data-placeholder="testimonials" data-reveal>
+          <div class="reviews-ghosts" aria-hidden="true">
+            <div class="card ghost-card"><span class="ghost-card__quote"></span><i style="width: 92%"></i><i style="width: 84%"></i><i style="width: 88%"></i><i style="width: 60%"></i><div class="ghost-card__person"><b></b><i style="width: 40%"></i></div></div>
+            <div class="card ghost-card"><span class="ghost-card__quote"></span><i style="width: 88%"></i><i style="width: 94%"></i><i style="width: 72%"></i><i style="width: 50%"></i><div class="ghost-card__person"><b></b><i style="width: 46%"></i></div></div>
+            <div class="card ghost-card"><span class="ghost-card__quote"></span><i style="width: 90%"></i><i style="width: 80%"></i><i style="width: 86%"></i><i style="width: 64%"></i><div class="ghost-card__person"><b></b><i style="width: 36%"></i></div></div>
           </div>
-
-          <!-- 4 Feature Cards -->
-          <div class="demo-feature-grid">
-            <div class="demo-feature-card">
-              <div class="demo-feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              </div>
-              <h3 class="demo-feature-title">Personalized Design</h3>
-              <p class="demo-feature-desc">Custom homepage concept crafted specifically for your brand & industry.</p>
-            </div>
-
-            <div class="demo-feature-card">
-              <div class="demo-feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <h3 class="demo-feature-title">24–48 Hour Delivery</h3>
-              <p class="demo-feature-desc">Receive your interactive design mockup within 2 business days.</p>
-            </div>
-
-            <div class="demo-feature-card">
-              <div class="demo-feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-              </div>
-              <h3 class="demo-feature-title">Mobile Responsive</h3>
-              <p class="demo-feature-desc">Flawless layout optimization across smartphones, tablets, and desktops.</p>
-            </div>
-
-            <div class="demo-feature-card">
-              <div class="demo-feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <h3 class="demo-feature-title">₹99 Adjustable</h3>
-              <p class="demo-feature-desc">100% of your ₹99 deposit is subtracted from your full project invoice.</p>
-            </div>
-          </div>
-
-          <!-- CTA Row -->
-          <div class="demo-banner-cta-row">
-            <a href="book-demo.html" class="demo-banner-cta-btn">
-              <span>Book Demo</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <div class="card reviews-panel">
+            <span class="placeholder-tag">Coming soon</span>
+            <h3>Verified client reviews will appear here.</h3>
+            <p>We only publish reviews from real clients, with their permission. If you’d like to speak with someone we’ve worked with, ask us for a reference.</p>
+            <a class="btn btn--ghost btn--wa" href="https://wa.me/918534855501?text=Hi%20AGMIEX%2C%20could%20you%20connect%20me%20with%20a%20client%20reference%3F" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>
+              Ask for a reference
             </a>
-            <div class="demo-banner-guarantee">
-              <span class="check-pill">✓ Zero Full Obligation</span>
-              <span class="check-pill">✓ Direct Founder Consultation</span>
-              <span class="check-pill">✓ 100% Adjustable against Project</span>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══════════ FAQ ═══════════ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="faq-aside" data-reveal>
+          <header class="section-head">
+            <p class="eyebrow"><span class="eyebrow__index">09</span>FAQ</p>
+            <h2 class="section-title" id="faq-title">Frequently asked questions</h2>
+          </header>
+          <div class="card help-card">
+            <p><strong>Still have a question?</strong> Message us — you’ll get a straight answer from the person who’ll actually build your project.</p>
+            <div class="help-card__actions">
+              <a class="btn btn--ghost btn--sm btn--wa" href="https://wa.me/918534855501" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>WhatsApp</a>
+              <a class="btn btn--ghost btn--sm" href="mailto:agamsbusiness@gmail.com"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-mail"></use></svg>Email</a>
+            </div>
+          </div>
+        </div>
 
-    <!-- ═══════════════════════════════════════════
-         3. FEATURES SECTION
-    ═══════════════════════════════════════════ -->
-    <section class="features" id="prebuilt">
+        <div class="faq-list" data-accordion data-accordion-single data-reveal>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-1-btn" aria-expanded="true" aria-controls="faq-1">What services does AGMIEX offer?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div class="faq-item__body"><p>We design and build AI and GenAI solutions, AI agents and automation, websites and web apps, mobile apps, Power BI dashboards, custom software, and APIs and backends. Many projects combine several of these — for example, a web app with an AI assistant and a reporting dashboard.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-2-btn" aria-expanded="false" aria-controls="faq-2">How much does a project cost?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div class="faq-item__body"><p>It depends on scope, features and timelines. After a free consultation we share a clear, itemised quote before any work starts. If you’d like to see our design approach first, you can start with the ₹99 website demo — the fee is adjusted against your project if you go ahead.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-3-btn" aria-expanded="false" aria-controls="faq-3">How long does it take to deliver a project?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div class="faq-item__body"><p>Pre-built solutions are typically delivered in 2 to 4 weeks, depending on complexity and customisation. Custom projects vary with scope — we agree on a timeline and milestones with you before development begins.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-4-btn" aria-expanded="false" aria-controls="faq-4">Do I get the complete source code?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div class="faq-item__body"><p>Yes. On project completion and final payment, you receive full ownership of the source code and project assets.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-5-btn" aria-expanded="false" aria-controls="faq-5">What’s the difference between a pre-built and a custom project?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div class="faq-item__body"><p>Pre-built solutions use our pre-designed structures and code modules for faster deployment. Custom development is engineered from scratch around your specific business logic and workflows.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-6-btn" aria-expanded="false" aria-controls="faq-6">Do you provide maintenance and support after launch?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-6" role="region" aria-labelledby="faq-6-btn"><div class="faq-item__body"><p>Yes. We offer maintenance plans covering ongoing support, bug fixes, updates and performance reviews, so your product stays secure and up to date.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-7-btn" aria-expanded="false" aria-controls="faq-7">Which technologies do you use?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-7" role="region" aria-labelledby="faq-7-btn"><div class="faq-item__body"><p>We primarily use React, Next.js, Node.js, Python, Tailwind CSS, AWS and Google Cloud, along with Power BI for analytics and leading LLM APIs for AI features. We choose the stack that best fits your project.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-8-btn" aria-expanded="false" aria-controls="faq-8">Do you work with clients outside Agra?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-8" role="region" aria-labelledby="faq-8-btn"><div class="faq-item__body"><p>Yes. We’re based in Agra, Uttar Pradesh, and work remotely with clients across India and internationally over video calls, WhatsApp and email.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__heading"><button class="faq-item__trigger" type="button" id="faq-9-btn" aria-expanded="false" aria-controls="faq-9">What is the ₹99 website demo?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq-item__panel" id="faq-9" role="region" aria-labelledby="faq-9-btn"><div class="faq-item__body"><p>It’s a low-risk way to see how we’d design your website. Share your requirements and we’ll create a personalised homepage concept in 24–48 hours. If you go ahead with the full project, the ₹99 is adjusted against your invoice. <a class="text-link" href="book-demo.html">See how the demo works</a></p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="section section--subtle" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div data-reveal>
+          <header class="section-head">
+            <p class="eyebrow"><span class="eyebrow__index">10</span>Contact</p>
+            <h2 class="section-title" id="contact-title">Tell us what you’re building.</h2>
+            <p class="lead">Share a few details and we’ll get back to you with next steps. Prefer to talk? Reach us directly.</p>
+          </header>
+
+          <ul class="channels" role="list">
+            <li>
+              <a class="channel channel--wa" href="https://wa.me/918534855501" target="_blank" rel="noopener">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg></span>
+                <span><span class="channel__label">WhatsApp</span><span class="channel__value">+91 85348 55501</span></span>
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-up-right"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="mailto:agamsbusiness@gmail.com">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-mail"></use></svg></span>
+                <span><span class="channel__label">Email</span><span class="channel__value">agamsbusiness@gmail.com</span></span>
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-up-right"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="tel:+918534855501">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-phone"></use></svg></span>
+                <span><span class="channel__label">Call</span><span class="channel__value">+91 85348 55501</span></span>
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-up-right"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="https://instagram.com/agmiex" target="_blank" rel="noopener">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-instagram"></use></svg></span>
+                <span><span class="channel__label">Instagram</span><span class="channel__value">@agmiex</span></span>
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-up-right"></use></svg>
+              </a>
+            </li>
+            <li>
+              <div class="channel">
+                <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-map-pin"></use></svg></span>
+                <span><span class="channel__label">Office</span><address class="channel__value" style="font-style: normal">Devri Rd, Phase 2, Defence Estate, Agra, Uttar Pradesh 282001</address></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card contact-card" data-form-card data-reveal>
+          <form class="form-grid" id="contact-form" data-form="contact" novalidate>
+            <div class="field--full">
+              <h3 class="contact-card__title">Start a project</h3>
+              <p class="contact-card__intro">Takes about a minute. Fields marked optional can be skipped.</p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="contact-name">Full name</label>
+              <input class="input" id="contact-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="100" data-label="your name" aria-describedby="contact-name-error">
+              <p class="field__error" id="contact-name-error"></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="contact-email">Email</label>
+              <input class="input" id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" data-label="your email address" aria-describedby="contact-email-error">
+              <p class="field__error" id="contact-email-error"></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="contact-phone">Phone / WhatsApp <span class="optional">(optional)</span></label>
+              <input class="input" id="contact-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" pattern="[0-9+()\s\-]{7,20}" data-pattern-message="Please enter a valid phone number, e.g. +91 98765 43210." aria-describedby="contact-phone-error">
+              <p class="field__error" id="contact-phone-error"></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="contact-service">Service <span class="optional">(optional)</span></label>
+              <div class="select-wrap">
+                <select class="input" id="contact-service" name="service">
+                  <option value="">Select a service</option>
+                  <option>AI &amp; GenAI Solutions</option>
+                  <option>AI Agents &amp; Automation</option>
+                  <option>Web Development</option>
+                  <option>Mobile App Development</option>
+                  <option>Power BI &amp; Analytics</option>
+                  <option>Custom Software</option>
+                  <option>APIs &amp; Backend</option>
+                  <option>Business Automation</option>
+                  <option>Maintenance &amp; Support</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="field__label" for="contact-budget">Estimated budget <span class="optional">(optional)</span></label>
+              <div class="select-wrap">
+                <select class="input" id="contact-budget" name="budget">
+                  <option value="">Select a range</option>
+                  <option>Under ₹50,000</option>
+                  <option>₹50,000 – ₹1,00,000</option>
+                  <option>₹1,00,000 – ₹3,00,000</option>
+                  <option>₹3,00,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="field__label" for="contact-message">Project details</label>
+              <textarea class="input" id="contact-message" name="message" rows="5" required minlength="10" maxlength="2000" data-label="a few details about your project" placeholder="What are you building, who is it for, and is there a deadline?" aria-describedby="contact-message-error"></textarea>
+              <p class="field__error" id="contact-message-error"></p>
+            </div>
+
+            <div class="hp-field" aria-hidden="true">
+              <label for="contact-website">Leave this field empty</label>
+              <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="alert alert--error field--full" role="alert" data-form-error hidden>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-alert"></use></svg>
+              <div>
+                <strong>Your message wasn’t sent.</strong>
+                <span data-error-message>Something went wrong. Please try again.</span>
+                <div class="alert__actions">
+                  <a class="btn btn--sm btn--ghost btn--wa" data-error-link="whatsapp" href="https://wa.me/918534855501" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>Send on WhatsApp</a>
+                  <a class="btn btn--sm btn--ghost" data-error-link="email" href="mailto:agamsbusiness@gmail.com"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-mail"></use></svg>Send by email</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions field--full">
+              <button class="btn btn--primary btn--lg btn--block" type="submit">
+                Send message
+                <svg class="icon icon--nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg>
+              </button>
+              <p class="form-footnote">We use your details only to reply to your enquiry. See our <a href="privacy-policy.html">privacy policy</a>.</p>
+            </div>
+          </form>
+
+          <div class="result-panel" data-form-success hidden>
+            <span class="result-panel__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+            <h3 data-focus>Thanks — your message is on its way.</h3>
+            <p>We’ve received your enquiry and will get back to you shortly. For anything urgent, message us on WhatsApp.</p>
+            <div class="result-panel__actions">
+              <a class="btn btn--ghost btn--wa" href="https://wa.me/918534855501" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>WhatsApp us</a>
+              <button class="btn btn--ghost" type="button" data-form-reset>Send another message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
-        <div class="reveal">
-          <span class="section-badge">Features</span>
-          <h2 class="section-title">Streamline Business with our<br>Flexible Options</h2>
-        </div>
-
-        <div class="features__grid">
-          <!-- Card 1 -->
-          <div class="feature-card reveal">
-            <div class="feature-card__visual">
-              <div class="placeholder-visual">Custom Development Preview</div>
-            </div>
-            <h3 class="feature-card__title">Custom Development</h3>
-            <p class="feature-card__desc">Monitor your finances live with clear, intuitive dashboards.</p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="feature-card reveal reveal-delay-1">
-            <div class="feature-card__visual">
-              <div class="placeholder-visual">SaaS Prebuilt Preview</div>
-            </div>
-            <h3 class="feature-card__title">SaaS Prebuilt @ 50,000 /-</h3>
-            <p class="feature-card__desc">Monitor your finances live with clear, intuitive dashboards.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         4. VIDEO PLAYER SECTION
-    ═══════════════════════════════════════════ -->
-    <section class="video-showcase">
-      <div class="container reveal">
-        <h2 class="video-showcase__title">
-          Streamline Business with our<br><span>Flexible options</span>
-        </h2>
-        <div class="video-showcase__wrapper">
-          <iframe src="https://www.youtube.com/embed/qoLTUdM55Cw?si=zFB1Mx-0-6mXa4Sy" title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         5. SOCIAL PRESENCE VIDEOS
-    ═══════════════════════════════════════════ -->
-    <section class="carousel-section">
-      <div class="container">
-        <div style="text-align: center;" class="reveal">
-          <span class="section-badge">Social Presence</span>
-          <h2 class="section-title">Trusted by 130k+ People</h2>
-        </div>
-
-        <div class="carousel-outer">
-          <div class="carousel-wrapper" id="testimonials-wrapper">
-            <!-- Slide 1 -->
-            <div class="testimonial-slide">
-              <div class="testimonial-slide__media">
-                <button class="testimonial-slide__play" aria-label="Play video">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                </button>
-                <button class="testimonial-slide__mute" aria-label="Mute video">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" fill="none"
-                      stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-                <div class="testimonial-slide__info">
-                  <span class="testimonial-slide__name">Client Testimonial</span>
-                  <span class="testimonial-slide__company">HEALTHCARE PARTNER</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="testimonial-slide">
-              <div class="testimonial-slide__media">
-                <button class="testimonial-slide__play" aria-label="Play video">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                </button>
-                <button class="testimonial-slide__mute" aria-label="Mute video">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" fill="none"
-                      stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-                <div class="testimonial-slide__info">
-                  <span class="testimonial-slide__name">Client Testimonial</span>
-                  <span class="testimonial-slide__company">FINTECH SOLUTIONS</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="testimonial-slide">
-              <div class="testimonial-slide__media">
-                <button class="testimonial-slide__play" aria-label="Play video">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                </button>
-                <button class="testimonial-slide__mute" aria-label="Mute video">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" fill="none"
-                      stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-                <div class="testimonial-slide__info">
-                  <span class="testimonial-slide__name">Client Testimonial</span>
-                  <span class="testimonial-slide__company">RETAIL INTEGRATION</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="testimonial-slide">
-              <div class="testimonial-slide__media">
-                <button class="testimonial-slide__play" aria-label="Play video">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                </button>
-                <button class="testimonial-slide__mute" aria-label="Mute video">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" fill="none"
-                      stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-                <div class="testimonial-slide__info">
-                  <span class="testimonial-slide__name">Client Testimonial</span>
-                  <span class="testimonial-slide__company">EDUCATION PLATFORM</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-controls">
-            <button class="carousel-btn" id="testimonials-prev" aria-label="Previous">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-            </button>
-            <div class="carousel-dots" id="testimonials-dots"></div>
-            <button class="carousel-btn" id="testimonials-next" aria-label="Next">
-              <svg viewBox="0 0 24 24">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         6. PORTFOLIO SHOWCASE
-    ═══════════════════════════════════════════ -->
-    <section class="portfolio" id="customized">
-      <div class="container">
-        <div style="text-align: center;" class="reveal">
-          <span class="section-badge">Social Presence</span>
-          <h2 class="section-title">Turning Visions Into Digital Reality</h2>
-        </div>
-
-        <div class="portfolio__grid">
-          <!-- Card 1 -->
-          <div class="portfolio-card reveal">
-            <div class="portfolio-card__img-box">
-              <div class="placeholder-visual">Lal Sweets Ecom Website</div>
-            </div>
-            <h3 class="portfolio-card__title">Lal Sweets Ecom Website</h3>
-            <p class="portfolio-card__desc">Modern sweets store with responsive design for smooth shopping.</p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="portfolio-card reveal reveal-delay-1">
-            <div class="portfolio-card__img-box">
-              <div class="placeholder-visual">Kirtilals : Luxury Website</div>
-            </div>
-            <h3 class="portfolio-card__title">Kirtilals : Luxury Website</h3>
-            <p class="portfolio-card__desc">Premium diamond-jewellery store with elegant UX for luxury buyers.</p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="portfolio-card reveal reveal-delay-2">
-            <div class="portfolio-card__img-box">
-              <div class="placeholder-visual">Tradescribe: Trading Platform</div>
-            </div>
-            <h3 class="portfolio-card__title">Tradescribe: Trading Platform</h3>
-            <p class="portfolio-card__desc">Built a sleek journaling platform for tracking trades with AI analytics.</p>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="portfolio-card reveal">
-            <div class="portfolio-card__img-box">
-              <div class="placeholder-visual">Murzban: Clothing Luxury</div>
-            </div>
-            <h3 class="portfolio-card__title">Murzban: Clothing Luxury</h3>
-            <p class="portfolio-card__desc">Modern online store for curated men's & women's designer fashion.</p>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="portfolio-card reveal reveal-delay-1">
-            <div class="portfolio-card__img-box">
-              <div class="placeholder-visual">Greenfeels: Sustainable Ecom</div>
-            </div>
-            <h3 class="portfolio-card__title">Greenfeels: Sustainable Ecom</h3>
-            <p class="portfolio-card__desc">Curated eco-friendly essentials in responsive design for conscious shoppers.
-            </p>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="portfolio-card reveal reveal-delay-2">
-            <div class="portfolio-card__img-box">
-              <div class="placeholder-visual">Momentz</div>
-            </div>
-            <h3 class="portfolio-card__title">Momentz</h3>
-            <p class="portfolio-card__desc">Curated luxury gifts and premium home decor in a sleek online storefront.
-            </p>
-          </div>
-        </div>
-
-        <div class="portfolio__actions reveal">
-          <button class="btn btn--secondary">View All</button>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         7. MID PAGE MARQUEE TICKER
-    ═══════════════════════════════════════════ -->
-    <div class="marquee-band"
-      style="background: var(--bg-alt); color: var(--text-color); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-      <div class="marquee-band__track">
-        <span class="marquee-band__item">Developer Focus</span>
-        <span class="marquee-band__item">Clean Architecture</span>
-        <span class="marquee-band__item">Design Excellence</span>
-        <span class="marquee-band__item">Scale & Optimize</span>
-        <span class="marquee-band__item">Developer Focus</span>
-        <span class="marquee-band__item">Clean Architecture</span>
-        <span class="marquee-band__item">Design Excellence</span>
-        <span class="marquee-band__item">Scale & Optimize</span>
-      </div>
-    </div>
-
-
-    <!-- ═══════════════════════════════════════════
-         7B. HAPPY CLIENTS TESTIMONIALS
-    ═══════════════════════════════════════════ -->
-    <section class="client-testimonials">
-      <div class="container">
-        <div style="text-align: center;" class="reveal">
-          <span class="section-badge">Client Testimonials</span>
-          <h2 class="section-title">Happy Clients Testimonials</h2>
-        </div>
-
-        <div class="carousel-outer">
-          <div class="carousel-wrapper" id="clients-wrapper">
-            <!-- Client 1 -->
-            <div class="client-card">
-              <div class="client-card__media">
-                <div class="placeholder-visual placeholder-visual--portrait">Video Placeholder</div>
-                <button class="client-card__play" aria-label="Play video">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                </button>
-                <button class="client-card__mute" aria-label="Mute">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" fill="none"
-                      stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-              </div>
-              <div class="client-card__info">
-                <span class="client-card__name">Muktesh Narula</span>
-                <span class="client-card__company">GOVISOFT</span>
-              </div>
-            </div>
-
-            <!-- Client 2 -->
-            <div class="client-card">
-              <div class="client-card__media">
-                <div class="placeholder-visual placeholder-visual--portrait">Video Placeholder</div>
-                <button class="client-card__play" aria-label="Play video">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                </button>
-                <button class="client-card__mute" aria-label="Mute">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" fill="none"
-                      stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-              </div>
-              <div class="client-card__info">
-                <span class="client-card__name">Shriya Sadneni</span>
-                <span class="client-card__company">MURZBAN</span>
-              </div>
-            </div>
-
-            <!-- Client 3 -->
-            <div class="client-card">
-              <div class="client-card__media">
-                <div class="placeholder-visual placeholder-visual--portrait">Video Placeholder</div>
-                <button class="client-card__play" aria-label="Play video">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                </button>
-                <button class="client-card__mute" aria-label="Mute">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" fill="none"
-                      stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-              </div>
-              <div class="client-card__info">
-                <span class="client-card__name">Yashwant Kumar</span>
-                <span class="client-card__company">KIRTILALS</span>
-              </div>
-            </div>
-
-            <!-- Client 4 -->
-            <div class="client-card">
-              <div class="client-card__media">
-                <div class="placeholder-visual placeholder-visual--portrait">Video Placeholder</div>
-                <button class="client-card__play" aria-label="Play video">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                </button>
-                <button class="client-card__mute" aria-label="Mute">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" fill="none"
-                      stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-              </div>
-              <div class="client-card__info">
-                <span class="client-card__name">Client Testimonial</span>
-                <span class="client-card__company">PARTNER</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-controls">
-            <button class="carousel-btn" id="clients-prev" aria-label="Previous">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-            </button>
-            <div class="carousel-dots" id="clients-dots"></div>
-            <button class="carousel-btn" id="clients-next" aria-label="Next">
-              <svg viewBox="0 0 24 24">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         8. TEAM SECTION
-    ═══════════════════════════════════════════ -->
-    <section class="team-section" id="team">
-      <div class="container">
-        <div style="text-align: center;" class="reveal">
-          <span class="section-badge">Leadership</span>
-          <h2 class="section-title">Founder & Visionary</h2>
-        </div>
-
-        <div class="founder-showcase reveal">
-          <div class="founder-card">
-            <!-- Left / Top: Founder Portrait -->
-            <div class="founder-card__media">
-              <div class="founder-card__glow"></div>
-              <div class="founder-card__img-wrapper">
-                <img src="assets/team/agam-singh.jpg" alt="Agam Singh — Founder & CEO of AGMIEX" class="founder-card__img" />
-                <div class="founder-card__badge">
-                  <svg viewBox="0 0 24 24" class="founder-card__badge-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  <span>Verified Founder</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right / Bottom: Executive Bio & Vision -->
-            <div class="founder-card__content">
-              <span class="founder-card__tag">Founder & CEO, AGMIEX</span>
-              <h3 class="founder-card__name">Agam Singh</h3>
-              <p class="founder-card__quote">
-                “We don't just write code — we architect digital products that drive measurable revenue. Every solution we ship is built for performance, security, and long-term scalability.”
-              </p>
-
-              <div class="founder-card__highlights">
-                <div class="founder-card__highlight-item">
-                  <span class="founder-card__check">✓</span>
-                  <span>100% Source Code Ownership</span>
-                </div>
-                <div class="founder-card__highlight-item">
-                  <span class="founder-card__check">✓</span>
-                  <span>Full-Stack Engineering Leadership</span>
-                </div>
-                <div class="founder-card__highlight-item">
-                  <span class="founder-card__check">✓</span>
-                  <span>Direct Founder Consultation</span>
-                </div>
-              </div>
-
-              <div class="founder-card__footer">
-                <a href="#contact" class="founder-card__cta">
-                  <span>Connect with Agam</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
-
-                <div class="founder-card__socials">
-                  <a href="#contact" class="founder-card__social-link" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5V13.2a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                  </a>
-                  <a href="#contact" class="founder-card__social-link" aria-label="X / Twitter">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         9. FAQ SECTION
-    ═══════════════════════════════════════════ -->
-    <section class="faq" id="faq">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="section-title" style="text-align: left;">Frequently Asked<br>Questions</h2>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item reveal">
-            <button class="faq-item__trigger">
-              <span>How long does it take to deliver a pre-built application or website?</span>
-              <svg class="faq-item__chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq-item__content">
-              <div class="faq-item__inner">
-                Typical pre-built applications are delivered within 2 to 4 weeks depending on complexity and
-                customization requirements.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item reveal reveal-delay-1">
-            <button class="faq-item__trigger">
-              <span>Do you provide the complete source code after development?</span>
-              <svg class="faq-item__chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq-item__content">
-              <div class="faq-item__inner">
-                Yes, absolutely. Upon project completion and final payment, you receive full ownership of the source
-                code and assets.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item reveal reveal-delay-2">
-            <button class="faq-item__trigger">
-              <span>What's the difference between a pre-built and a custom development project?</span>
-              <svg class="faq-item__chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq-item__content">
-              <div class="faq-item__inner">
-                Pre-built solutions utilize our pre-designed structures and code modules for faster deployment. Custom
-                development is engineered entirely from scratch to suit unique enterprise logic.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item reveal reveal-delay-3">
-            <button class="faq-item__trigger">
-              <span>Do you provide maintenance and support after delivery?</span>
-              <svg class="faq-item__chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq-item__content">
-              <div class="faq-item__inner">
-                Yes, we offer multiple maintenance tiers, providing ongoing support, bug fixes, updates, and
-                optimization reviews.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item reveal reveal-delay-4">
-            <button class="faq-item__trigger">
-              <span>What technologies do you use for development?</span>
-              <svg class="faq-item__chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq-item__content">
-              <div class="faq-item__inner">
-                We primarily use React, Next.js, Node.js, Python, TailwindCSS, AWS, and GCP to compile rapid, secure,
-                and robust systems.
-              </div>
-            </div>
-          </div>
+        <div class="map-embed" data-reveal>
+          <iframe title="Map showing the AGMIEX office on Devri Road, Agra" src="https://maps.google.com/maps?q=Devri%20Rd%2C%20Phase%202%2C%20Defence%20Estate%2C%20Agra%2C%20Uttar%20Pradesh%20282001&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
   </main>
 
-
-  <!-- ═══════════════════════════════════════════
-       CONTACT US SECTION
-  ═══════════════════════════════════════════ -->
-  <section class="contact-section" id="contact">
-    <!-- Header with Grid Background -->
-    <div class="contact-hero">
-      <div class="container contact-hero__inner">
-        <div class="floating-shape floating-shape--left">
-          <svg viewBox="0 0 100 100" width="80" height="80">
-            <path d="M20,50 Q40,20 50,50 T80,50" fill="none" stroke="currentColor" stroke-width="4"
-              stroke-linecap="round" opacity="0.15" />
-          </svg>
-        </div>
-        <div class="floating-shape floating-shape--right">
-          <svg viewBox="0 0 100 100" width="80" height="80">
-            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="10 5"
-              opacity="0.15" />
-          </svg>
-        </div>
-        <h2 class="contact-hero__title">Contact Us</h2>
-        <p class="contact-hero__desc">From idea to launch, we design and develop tailor-made websites & apps that scale
-          with your business.</p>
-      </div>
-    </div>
-
-    <!-- Contact Form & Details Section -->
-    <div class="contact-details-section">
-      <div class="container">
-        <div class="contact-grid">
-          <!-- Left Info Column -->
-          <div class="contact-info reveal">
-            <span class="section-badge">Contact Form</span>
-            <h3 class="contact-info__title">Have a question?<br>Contact us now</h3>
-            <p class="contact-info__desc">Have questions or need assistance? Our friendly team is ready to provide all
-              the info you need — just get in touch.</p>
-
-            <div class="contact-info__list">
-              <!-- Address -->
-              <div class="contact-info__item">
-                <div class="contact-info__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <div class="contact-info__text">
-                  <p class="contact-info__label">Our Location</p>
-                  <p class="contact-info__value">Devri Rd, Phase 2, Defence Estate, Agra, Uttar Pradesh 282001</p>
-                </div>
-              </div>
-
-              <!-- Email -->
-              <div class="contact-info__item">
-                <div class="contact-info__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
-                  </svg>
-                </div>
-                <div class="contact-info__text">
-                  <p class="contact-info__label">Email Us</p>
-                  <a href="mailto:agamsbusiness@gmail.com"
-                    class="contact-info__value contact-info__link">agamsbusiness@gmail.com</a>
-                </div>
-              </div>
-
-              <!-- Phone -->
-              <div class="contact-info__item">
-                <div class="contact-info__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                </div>
-                <div class="contact-info__text">
-                  <p class="contact-info__label">Call Us</p>
-                  <a href="tel:+918534855501" class="contact-info__value contact-info__link">+91 85348 55501</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Form Column -->
-          <div class="contact-form-wrapper reveal reveal-delay-1">
-            <form class="contact-form" id="contact-us-form">
-              <div class="contact-form__row">
-                <div class="contact-form__group">
-                  <label for="contact-name" class="sr-only">Your Name</label>
-                  <div class="input-with-icon">
-                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                      <circle cx="12" cy="7" r="4" />
-                    </svg>
-                    <input type="text" id="contact-name" placeholder="Your Name" required>
-                  </div>
-                </div>
-                <div class="contact-form__group">
-                  <label for="contact-phone" class="sr-only">Phone Number</label>
-                  <div class="input-with-icon">
-                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                    </svg>
-                    <input type="tel" id="contact-phone" placeholder="Phone Number">
-                  </div>
-                </div>
-              </div>
-              <div class="contact-form__row">
-                <div class="contact-form__group">
-                  <label for="contact-email" class="sr-only">Email Address</label>
-                  <div class="input-with-icon">
-                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                      <polyline points="22,6 12,13 2,6" />
-                    </svg>
-                    <input type="email" id="contact-email" placeholder="Email Address" required>
-                  </div>
-                </div>
-                <div class="contact-form__group">
-                  <label for="contact-subject" class="sr-only">Subject</label>
-                  <div class="input-with-icon">
-                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                      <path d="M12 8v4" />
-                      <path d="M12 16h.01" />
-                    </svg>
-                    <input type="text" id="contact-subject" placeholder="Subject">
-                  </div>
-                </div>
-              </div>
-              <div class="contact-form__group">
-                <label for="contact-message" class="sr-only">Message</label>
-                <div class="input-with-icon input-with-icon--textarea">
-                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                  <textarea id="contact-message" rows="5" placeholder="Message" required></textarea>
-                </div>
-              </div>
-              <button type="submit" class="btn btn--primary contact-form__btn">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Map Section -->
-    <div class="contact-map-section container reveal">
-      <div class="contact-map-wrapper">
-        <iframe
-          src="https://maps.google.com/maps?q=Devri%20Rd%2C%20Phase%202%2C%20Defence%20Estate%2C%20Agra%2C%20Uttar%20Pradesh%20282001&t=&z=15&ie=UTF8&iwloc=&output=embed"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════ -->
-  <footer class="footer">
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="site-footer on-dark">
     <div class="container">
-      <div class="footer__inner">
+      <div class="footer-cta">
         <div>
-          <p class="footer__email-lbl">Contact us at</p>
-          <a href="mailto:agamsbusiness@gmail.com" class="footer__email-val"
-            style="display: block; margin-bottom: 24px;">agamsbusiness@gmail.com</a>
-
-          <form class="footer__form" id="newsletter-form">
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Subscribe</button>
-          </form>
+          <p class="eyebrow">Let’s talk</p>
+          <h2 class="footer-cta__title">Have a project in mind?</h2>
+          <p class="footer-cta__text">Tell us what you’re building. You’ll get a clear, honest plan — no pressure and no jargon.</p>
         </div>
-
-        <div class="footer__links-grid">
-          <div>
-            <h4 class="footer__links-title">Links</h4>
-            <ul class="footer__link-list">
-              <li><a href="#" class="footer__link-item">Home</a></li>
-              <li><a href="#prebuilt" class="footer__link-item">Prebuilt</a></li>
-              <li><a href="#customized" class="footer__link-item">Customized</a></li>
-              <li><a href="#team" class="footer__link-item">About Us</a></li>
-              <li><a href="#contact" class="footer__link-item">Contact Us</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="footer__links-title">More Resources</h4>
-            <ul class="footer__link-list">
-              <li><a href="#" class="footer__link-item">Blogs</a></li>
-              <li><a href="#" class="footer__link-item">Terms & Conditions</a></li>
-              <li><a href="#" class="footer__link-item">Privacy Policy</a></li>
-              <li><a href="#" class="footer__link-item">Refund Policy</a></li>
-            </ul>
-          </div>
+        <div class="footer-cta__actions">
+          <a class="btn btn--primary btn--lg" href="#contact">Start a project <svg class="icon icon--nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
+          <a class="btn btn--ghost btn--lg btn--wa" href="https://wa.me/918534855501" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>WhatsApp</a>
         </div>
       </div>
 
-      <div class="footer__bottom">
-        <span>&copy; 2026 AGMIEX. All rights reserved.</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="AGMIEX — back to top">
+            <img class="brand__logo" src="assets/img/agmiex-logo.png" width="336" height="102" alt="AGMIEX" loading="lazy" decoding="async">
+          </a>
+          <p class="footer-brand__text">A founder-led IT services studio in Agra, India — building AI, web, mobile and custom software for growing businesses.</p>
+          <div class="footer-socials">
+            <a class="icon-btn" href="https://instagram.com/agmiex" target="_blank" rel="noopener" aria-label="AGMIEX on Instagram"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-instagram"></use></svg></a>
+            <a class="icon-btn" href="https://wa.me/918534855501" target="_blank" rel="noopener" aria-label="Chat with AGMIEX on WhatsApp"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg></a>
+            <a class="icon-btn" href="mailto:agamsbusiness@gmail.com" aria-label="Email AGMIEX"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-mail"></use></svg></a>
+          </div>
+          <div class="footer-newsletter">
+            <label class="footer-newsletter__label" for="newsletter-email">Occasional notes on AI, software &amp; automation</label>
+            <form class="inline-form" data-form="newsletter" novalidate>
+              <input class="input" id="newsletter-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" placeholder="you@company.com" data-label="your email address" aria-describedby="newsletter-email-error">
+              <div class="hp-field" aria-hidden="true"><label for="newsletter-website">Leave this field empty</label><input id="newsletter-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+              <button class="btn btn--primary" type="submit">Subscribe</button>
+            </form>
+            <p class="field__error" id="newsletter-email-error"></p>
+            <p class="form-status" role="status" data-form-status></p>
+          </div>
+        </div>
+
+        <nav class="footer-col" aria-labelledby="footer-services">
+          <h3 id="footer-services">Services</h3>
+          <ul role="list">
+            <li><a href="#ai-genai">AI &amp; GenAI Solutions</a></li>
+            <li><a href="#ai-agents">AI Agents &amp; Automation</a></li>
+            <li><a href="#web-development">Web Development</a></li>
+            <li><a href="#mobile-apps">Mobile Apps</a></li>
+            <li><a href="#power-bi">Power BI &amp; Analytics</a></li>
+            <li><a href="#custom-software">Custom Software</a></li>
+            <li><a href="#apis-backend">APIs &amp; Backend</a></li>
+            <li><a href="#business-automation">Business Automation</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-labelledby="footer-company">
+          <h3 id="footer-company">Company</h3>
+          <ul role="list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#why-agmiex">Why AGMIEX</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="book-demo.html">₹99 website demo</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul role="list">
+            <li><a href="mailto:agamsbusiness@gmail.com">agamsbusiness@gmail.com</a></li>
+            <li><a href="tel:+918534855501">+91 85348 55501</a></li>
+            <li><a href="https://wa.me/918534855501" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><address>Devri Rd, Phase 2, Defence Estate,<br>Agra, Uttar Pradesh 282001</address></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AGMIEX. All rights reserved.</p>
+        <nav aria-label="Legal">
+          <ul role="list">
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms.html">Terms &amp; conditions</a></li>
+            <li><a href="terms.html#payments-refunds">Refunds</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
+
+    <a class="wa-float" href="https://wa.me/918534855501?text=Hi%20AGMIEX%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with AGMIEX on WhatsApp">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-whatsapp"></use></svg>
+    </a>
   </footer>
 
-
-  <!-- ═══════════════════════════════════════════
-       FLOATING SOCIAL BUTTONS
-  ═══════════════════════════════════════════ -->
-
-  <!-- Instagram -->
-  <a href="https://instagram.com/agmiex" class="social-float social-float--instagram" target="_blank"
-    rel="noopener noreferrer" aria-label="Instagram Page">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-    </svg>
-  </a>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/918534855501" class="social-float social-float--whatsapp" target="_blank"
-    rel="noopener noreferrer" aria-label="WhatsApp Chat">
-    <div class="social-float__pulse"></div>
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.07.953 11.47.953c-5.44 0-9.866 4.372-9.87 9.802 0 1.698.48 3.35 1.387 4.814L1.99 21.03l5.056-1.306c.01-.005.02-.01.03-.01zM17.11 14c-.28-.14-1.65-.81-1.91-.91-.26-.09-.45-.14-.64.14-.19.28-.73.91-.9 1.1-.16.19-.33.21-.61.07-2.73-1.36-4.47-3-5.22-4.29-.2-.33-.02-.51.15-.68.15-.15.33-.35.49-.53.16-.17.21-.29.31-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49-.16-.01-.35-.01-.54-.01-.19 0-.5.07-.76.35-.26.28-1 1-1 2.44 0 1.44 1.05 2.84 1.2 3.03.14.19 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.71.22 1.35.19 1.86.11.57-.08 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.32-.07-.12-.26-.19-.54-.33z" />
-    </svg>
-  </a>
-
-  <!-- Script links -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/main.js"></script>
-  <script src="js/payment-button.js"></script>
-  <script src="js/demo-timer.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,120 @@
+/* ═══════════════════════════════════════════
+   AGMIEX — Design tokens
+   Light is the base; dark applies via [data-theme="dark"],
+   via .on-dark (always-dark bands), or via the OS setting when JS is off.
+   ═══════════════════════════════════════════ */
+
+:root {
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --container: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+  --section-y: clamp(4.5rem, 9vw, 8rem);
+  --header-h: 72px;
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur: 280ms;
+  --dur-slow: 700ms;
+
+  /* Brand constants (theme-independent) */
+  --brand-navy: #0b1220;
+  --brand-blue: #2563eb;
+  --brand-blue-700: #1d4ed8;
+  --brand-sky: #60a5fa;
+  --whatsapp: #1da851;
+  --whatsapp-ink: #073b1f;
+
+  /* Light theme */
+  color-scheme: light;
+  --bg: #ffffff;
+  --bg-subtle: #f6f7fa;
+  --surface: #ffffff;
+  --surface-2: #f2f4f8;
+  --line: rgba(11, 18, 32, 0.09);
+  --line-strong: rgba(11, 18, 32, 0.16);
+  --text: #0b1220;
+  --text-2: #465167;
+  --text-3: #636d82;
+  --accent: #1d4ed8;
+  --accent-hover: #1e40af;
+  --accent-text: #1d4ed8;
+  --accent-soft: rgba(29, 78, 216, 0.08);
+  --on-accent: #ffffff;
+  --success: #15803d;
+  --success-soft: rgba(21, 128, 61, 0.1);
+  --danger: #b42318;
+  --danger-soft: rgba(180, 35, 24, 0.08);
+  --shadow-sm: 0 1px 2px rgba(11, 18, 32, 0.06);
+  --shadow-md: 0 10px 30px -12px rgba(11, 18, 32, 0.18), 0 2px 6px rgba(11, 18, 32, 0.04);
+  --shadow-lg: 0 30px 70px -24px rgba(11, 18, 32, 0.3);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --grid-line: rgba(11, 18, 32, 0.05);
+  --logo-filter: none;
+}
+
+/* Dark tokens — shared by the explicit theme, always-dark bands and the
+   transparent header state that sits over a dark hero. */
+[data-theme="dark"],
+.on-dark,
+.site-header[data-overlay]:not(.is-scrolled):not(.is-open) {
+  color-scheme: dark;
+  --bg: #07090e;
+  --bg-subtle: #0b0e15;
+  --surface: #0f131b;
+  --surface-2: #151a24;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.15);
+  --text: #edf0f6;
+  --text-2: #a9b2c3;
+  --text-3: #8a94a7;
+  --accent: #2563eb;
+  --accent-hover: #3b74f0;
+  --accent-text: #7aa7ff;
+  --accent-soft: rgba(96, 165, 250, 0.12);
+  --on-accent: #ffffff;
+  --success: #4ade80;
+  --success-soft: rgba(74, 222, 128, 0.12);
+  --danger: #fca5a5;
+  --danger-soft: rgba(248, 113, 113, 0.12);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 32px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+  --header-bg: rgba(7, 9, 14, 0.72);
+  --grid-line: rgba(255, 255, 255, 0.045);
+  --logo-filter: brightness(0) invert(1);
+}
+
+/* No-JS fallback: follow the OS preference */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --bg: #07090e;
+    --bg-subtle: #0b0e15;
+    --surface: #0f131b;
+    --surface-2: #151a24;
+    --line: rgba(255, 255, 255, 0.08);
+    --line-strong: rgba(255, 255, 255, 0.15);
+    --text: #edf0f6;
+    --text-2: #a9b2c3;
+    --text-3: #8a94a7;
+    --accent: #2563eb;
+    --accent-hover: #3b74f0;
+    --accent-text: #7aa7ff;
+    --accent-soft: rgba(96, 165, 250, 0.12);
+    --success: #4ade80;
+    --success-soft: rgba(74, 222, 128, 0.12);
+    --danger: #fca5a5;
+    --danger-soft: rgba(248, 113, 113, 0.12);
+    --header-bg: rgba(7, 9, 14, 0.72);
+    --grid-line: rgba(255, 255, 255, 0.045);
+    --logo-filter: brightness(0) invert(1);
+  }
+}

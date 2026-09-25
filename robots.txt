@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agmiex.com/sitemap.xml
